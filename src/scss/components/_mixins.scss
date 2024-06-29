@@ -1,0 +1,20 @@
+@mixin btn($padding: 10px 30px,
+$fz: 14px,
+$fw: 400,
+$color: var(--white),
+$background: linear-gradient(#8ec63f,#7db133)) {
+    border: none;
+    background: $background;
+    color: $color;
+    padding: $padding;
+    font-size: $fz;
+    font-weight: $fw;
+}
+
+@mixin font($fz, $fw: 400, $ff: var(--main_font-family), $lh: normal, $pos: left) {
+    font-family: $ff;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    text-align: $pos;
+}

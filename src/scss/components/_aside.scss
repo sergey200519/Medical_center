@@ -1,0 +1,111 @@
+@keyframes menu_item {
+    0% {
+        background: linear-gradient(var(--lightgreen), var(--darkgreen));
+    }
+    25% {
+        background: linear-gradient(var(--lightgreen) 25%, var(--darkgreen) 100%);
+    }
+    50% {
+        background: linear-gradient(var(--lightgreen) 50%, var(--darkgreen) 100%);
+    }
+    75% {
+        background: linear-gradient(var(--lightgreen) 75%, var(--darkgreen) 100%);
+    }
+    100% {
+        background: linear-gradient(var(--lightgreen) 100%, var(--darkgreen) 100%);
+    }
+}
+
+.asidemenu {
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        // &_submenu {
+        //     overflow: hidden;
+        //     max-height: 0;
+        //     display: none;
+        // }
+        > li {
+            // background: linear-gradient(#267831, #14601e);
+            position: relative;
+            color: var(--white);
+            cursor: pointer;
+            transition: 0.8s;
+            > menu {
+                overflow: hidden;
+                // display: none;
+                transition: .8s;
+            } 
+            > a {
+                display: block;
+                padding: 15px 100px 15px 15px;
+                background: linear-gradient(var(--lightgreen), var(--blackgreen));
+            }
+            > a:hover {
+                animation: menu_item;
+                animation-duration: 0.1s;
+                background: var(--lightgreen);
+            }
+        }
+        > li::after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 20px;
+            height: 20px;
+            background-image: url(../img/arrow_panel.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        > li.active {
+            a {
+                background: var(--lightgreen);
+            }
+            menu {
+                padding-top: 20px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-left: 45px;
+                li {
+                    a {
+                        background: transparent;
+                        position: relative;
+                        color: var(--black);
+                    }
+                    a::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        left: -25px;
+                        width: 10px;
+                        height: 10px;
+                        background: var(--gray);
+                        border-radius: 50%;
+                    }
+                    a:hover {
+                        color: var(--darkgreen);
+                    }
+                }
+                li:hover a::before {
+                    background: var(--darkgreen);
+                }
+            }
+        }
+        > li.active::after {
+            top: var(--li_active_before_top);
+            margin: 0;
+        }
+    }
+}

@@ -35,16 +35,11 @@ export const scss = () => {
 				}),
 			),
 		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				autoprefixer({
-					grid: true,
-					overrideBrowserslist: ['last 3 versions'],
-					cascade: true,
-				}),
-			),
-		)
+		.pipe(autoprefixer({
+            grid: true,
+            overrideBrowserslist: ["last 3 versions"],
+            cascade: true,
+        }))
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(cleanCss())
 		.pipe(

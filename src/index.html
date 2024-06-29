@@ -1,17 +1,166 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/components/head.html',{"title": "Главная"})
+<!-- @@include('html/components/head.html',{
+"title": "Главная",
+"more": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css\">"
+}) -->
+@@include('html/components/head.html',{"title": "Главная", "more": ""})
 
 <body>
 	<div class="wrapper">
 		@@include('html/components/header.html',{})
 		<main class="main">
-			
+			<article class="swiper-section">
+				<div class="container">
+					<div class="swiper-section_swiper swiper">
+						<div class="swiper_body">
+							<div class="swiper_body_slide active"><img src="img/index_swiper1.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
+							<div class="swiper_body_slide"><img src="img/index_swiper2.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
+							<div class="swiper_body_slide"><img src="img/index_swiper3.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
+						</div>
+						<div class="swiper_navigation">
+							<div class="swiper_navigation_item active"></div>
+							<div class="swiper_navigation_item"></div>
+							<div class="swiper_navigation_item"></div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<div class="wrap container">
+				@@include('html/components/aside.html',{})
+				<div class="content">
+					<section class="about">
+						<!-- TODO: возможно это не нужно -->
+						<header class="none">
+							<h2>О нас</h2>
+						</header>
+						<p><strong>Медицинский центр «Врачеватель»</strong> — это современная многопрофильная клиника,
+							оснащённая новейшим оборудованием ведущих мировых производителей. Начав свою деятельность в
+							Пушкинском районе Московской области в 1995 году, наши врачи оказали помощь более чем 50 000
+							пациентов.</p>
+						<p>Сегодня Медицинский центр «Врачеватель» осуществляет полный комплекс высококачественных
+							амбулаторно-поликлинических услуг, направленных на укрепление и восстановление здоровья, как
+							взрослого, так и детского населения.</p>
+						<a href="#" class="btn">Узнать больше</a>
+					</section>
+					<section class="team">
+						<header>
+							<h2>Наш коллектив</h2>
+						</header>
+						<div class="team_swiper swiper">
+							<div class="swiper_prev swiper_arrow">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="swiper_next swiper_arrow">
+								<span></span>
+								<span></span>
+							</div>
+							<div class="swiper_body">
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper1.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Аверин Александр Александрович</a> 
+									</h3>
+									<p class="swiper_body_slide_post">Хирург</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper2.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Алябьева Галина Алексеевна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Врач ультразвуковой диагностики</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper3.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Ананко Ирина Михайловна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Врач ультразвуковой диагностики</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper4.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Анощенкова Светлана Александровна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Администратор</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper5.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Антонова Маргарита Аркадьевна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Проктолог</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper6.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Архипова Лилия Ильинична</a>
+									</h3>
+									<p class="swiper_body_slide_post">Акушер-гинеколог</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper7.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Батманова Любовь Николаевна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Терапевт-кардиолог</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper8.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Беднова Мария Сергеевна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Администратор</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper9.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Бикмаева Мария Николаевна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Медсестра</p>
+								</div>
+								<div class="swiper_body_slide">
+									<div class="swiper_body_slide_imagewrap">
+										<img src="img/team_swiper10.jpg" alt="">
+									</div>
+									<h3 class="swiper_body_slide_name">
+										<a href="#">Васильева Ирина Александровна</a>
+									</h3>
+									<p class="swiper_body_slide_post">Акушер-гинеколог</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
 		</main>
 		@@include('html/components/footer.html',{})
 	</div>
 
-	<script src="js/script.min.js"></script>
+
+	<script type="module" src="js/script.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script type="module" src="js/pages/index.js"></script>
 </body>
 
 </html>

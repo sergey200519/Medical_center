@@ -15,7 +15,8 @@ export const path = {
     files: `${buildFolder}/files/`
   },
   src: {
-    js: `${srcFolder}/js/script.js`,
+    js: `${srcFolder}/js/**/*.js`,
+    ts: `${srcFolder}/js/**/*.ts`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
@@ -24,7 +25,7 @@ export const path = {
     svgicons: `${srcFolder}/img/svgicons/*.svg`
   },
   watch: {
-    js: `${srcFolder}/js/**/*.js`,
+    js: `${srcFolder}/js/**/*.{js,ts}`,
     scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,// меняем расширение на pug если сборка на нём
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,

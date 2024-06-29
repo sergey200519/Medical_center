@@ -1,0 +1,95 @@
+.topheader {
+    // margin-bottom: var(--section_gap);
+    &_topline {
+        height: 10px;
+        background: var(--lightgreen);
+        margin-bottom: 15px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container_info {
+        margin-bottom: 25px;
+    }
+    &_logo {
+        max-width: 350px;
+    }
+    .backinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        &_top {
+            display: flex;
+            gap: 10px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &_bottom {
+            display: flex;
+            gap: 40px;
+            p {
+                color: var(--darkgreen);
+                @include font(18px, 700);
+                span {
+                    color: var(--lightgreen);
+                }
+            }
+        }
+    }
+    &_navigation {
+        // background: linear-gradient(#267831,#14601e);
+        background: linear-gradient(var(--lightgreen), var(--blackgreen));
+        .headernav {
+            &_ul {
+                display: flex;
+                li {
+                    a {
+                        display: block;
+                        padding: 16px 32px;
+                        color: var(--white);
+                        @include font(18px);
+                    }
+                }
+                li.active,
+                li:hover {
+                    background: var(--lightgreen);
+                }
+            }
+        }
+        &_search {
+            position: relative;
+            input {
+                color: var(--white);
+                background: #195820;
+                padding: 10px;
+                border: none;
+                outline: none;
+                @include font(12px);
+            }
+            input::placeholder {
+                color: var(--white);
+            }
+            input:focus {
+                background: var(--darkgreen);
+            }
+            input[type="submit"] {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                background: url(../img/search.svg);
+                background-size: 20px 20px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.swiper-section {
+    background: var(--lightgray);
+    height: fit-content;
+    padding: var(--section_gap) 0 var(--section_gap) 0;
+    .swiper {
+        max-width: 1280px;
+        margin: 0 auto;
+        background: var(--white);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &_body {
+            position: relative;
+            &_slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                height: fit-content;
+                transition: 3s;
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+                a {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 40px;
+                    z-index: 2;
+                }
+            }
+            &_slide.active {
+                opacity: 1;
+            }
+        }
+        &_navigation {
+            display: flex;
+            gap: 10px;
+            width: fit-content;
+            margin: 0 auto;
+            &_item {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: var(--gray);
+                cursor: pointer;
+                transition: 3s;
+            }
+            &_item.active,
+            &_item:hover {
+                background: var(--lightgreen);
+            }
+        }
+    }
+}

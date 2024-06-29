@@ -18,15 +18,9 @@ export const html = () => {
           }),
         ),
       )
-      .pipe(fileInclude()) // для сборки html файлов, альтернатива pug-у
-    //.pipe(pug({        // для сборки pug файлов, альтернатива html-у
-    // Сжатие HTML файла
-    //  pretty: true,
-    // Показывать в терминале какой файл обработан
-    //  verbose: true
-    //}))
-      .pipe(app.plugins.replace(/@img\//g, 'img/'))
-      .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
+      .pipe(fileInclude())
+//      .pipe(app.plugins.replace(/@img\//g, 'img/'))
+      .pipe(webpHtmlNosvg())
       .pipe(
         app.plugins.if(
           app.isBuild,
