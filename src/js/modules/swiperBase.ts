@@ -10,6 +10,7 @@ type Swipe = {
 }
 
 export type Options = {
+    parent: HTMLElement;
     slideClass: string;
     pagination: boolean;
     paginationClass?: string;
@@ -37,6 +38,7 @@ export abstract class SwiperBase implements Swiper {
     protected nActiveSlide: number; 
     protected swiperPaginationItems: NodeListOf<HTMLElement>;
     protected swiperPaginationItemActive: HTMLElement;
+    protected nSlides: number;
 
     abstract render(): void;
     abstract changeWidth(): void;
@@ -48,6 +50,7 @@ export abstract class SwiperBase implements Swiper {
         
 
         this.slides = this.swiper.querySelectorAll(`:scope .${options.slideClass}`);
+        this.nSlides = this.slides.length;
         this.nActiveSlide = 0;
 
         if (this.options.swipe.swipe == "class") {
@@ -64,5 +67,9 @@ export abstract class SwiperBase implements Swiper {
             const self: SwiperBase = this;
             setInterval(self.nextSlide.bind(self), self.options.autoPlayTime);
         }
+
+        const self: SwiperBase = this;
+        this.changeWidth();
+        window.addEventListener("resize", self.changeWidth.bind(self));
     }
 }

@@ -11,10 +11,11 @@ $background: linear-gradient(#8ec63f,#7db133)) {
     font-weight: $fw;
 }
 
-@mixin font($fz, $fw: 400, $ff: var(--main_font-family), $lh: normal, $pos: left) {
+@mixin font($fz, $fw: 400, $ff: var(--main_font-family), $fs: normal, $lh: normal, $pos: left) {
     font-family: $ff;
     font-size: $fz;
     font-weight: $fw;
+    font-style: $fs;
     line-height: $lh;
     text-align: $pos;
 }

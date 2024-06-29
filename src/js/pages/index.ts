@@ -3,6 +3,7 @@ import { newTeamSwiper } from "./teamSwiper.js";
 
 
 newBannerSwiper(document.querySelector(".swiper-section_swiper"), {
+    "parent": document.querySelector(".swiper-section .container"),
     "slideClass": "swiper_body_slide",
     "pagination": true,
     "paginationClass": "swiper_navigation_item",
@@ -16,6 +17,7 @@ newBannerSwiper(document.querySelector(".swiper-section_swiper"), {
 });
 
 newTeamSwiper(document.querySelector(".team_swiper"), {
+    "parent": document.querySelector(".team"),
     "slideClass": "swiper_body_slide",
     "pagination": false,
     "swipe": {

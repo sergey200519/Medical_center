@@ -11,6 +11,8 @@
 		@@include('html/components/header.html',{})
 		<main class="main">
 			<article class="swiper-section">
+				<!-- TODO: ????????????????? -->
+				<header class="none"><h2>Слайдр банер</h2></header>
 				<div class="container">
 					<div class="swiper-section_swiper swiper">
 						<div class="swiper_body">
@@ -44,7 +46,7 @@
 						<a href="#" class="btn">Узнать больше</a>
 					</section>
 					<section class="team">
-						<header>
+						<header class="h2">
 							<h2>Наш коллектив</h2>
 						</header>
 						<div class="team_swiper swiper">
@@ -150,6 +152,36 @@
 							</div>
 						</div>
 					</section>
+					<div class="section_wrap">
+						<section class="news">
+							<header class="h2">
+								<h2>События</h2>
+							</header>
+							<ul class="news_wrap">
+								<li class="news_wrap_item">
+									<time datetime="2023-12-22">22.12.2023</time>
+									<h3><a href="#">График работы в новогодние праздники</a></h3>
+								</li>
+								<li class="news_wrap_item">
+									<time datetime="2023-06-14">14.06.2023</time>
+									<h3><a href="#">С Днем медицинского работника!</a></h3>
+								</li>
+								<li class="news_wrap_item">
+									<time datetime="2023-06-11">11.06.2023</time>
+									<h3><a href="#">С Днём России!</a></h3>
+								</li>
+							</ul>
+							<a href="#" class="btn">Все события</a>
+						</section>
+						<section class="blog">
+							<header class="h2"><h2>Статьи</h2></header>
+							<article class="blog_article">
+								<h3><a href="#">Лицо как зеркало недуга</a></h3>
+								<p>Не знаю, что и думать. У меня, зрелой женщины, неожиданно стали появляться угри, словно в подростковом возрасте. Пробовала традиционные средства борьбы с ними — ничего не помогает, а косметолог советует обратиться к дерматологу...</p>
+							</article>
+							<a href="" class="btn">Все статьи</a>
+						</section>
+					</div>
 				</div>
 			</div>
 		</main>
@@ -158,9 +190,7 @@
 
 
 	<script type="module" src="js/script.min.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-	<script type="module" src="js/pages/index.js"></script>
+	<script type="module" src="js/pages/index.min.js"></script>
 </body>
 
 </html>

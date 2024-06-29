@@ -33,11 +33,7 @@
             display: flex;
             gap: 40px;
             p {
-                color: var(--darkgreen);
-                @include font(18px, 700);
-                span {
-                    color: var(--lightgreen);
-                }
+                @extend .phones_p
             }
         }
     }
