@@ -1,3 +1,3 @@
-import { new_aside } from "./modules/aside.js";
+import { newAside } from "./modules/aside.js";
 
-new_aside(document.querySelector(".asidemenu_menu"))
+newAside(document.querySelector(".asidemenu_menu"))

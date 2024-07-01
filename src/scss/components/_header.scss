@@ -1,45 +1,69 @@
 .topheader {
     // margin-bottom: var(--section_gap);
-    &_topline {
-        height: 10px;
-        background: var(--lightgreen);
-        margin-bottom: 15px;
-    }
+    // TODO: not used
+    // &_topline {
+    //     height: 10px;
+    //     // background: var(--lightgreen);
+    //     background: var(--darkblue);
+    //     margin-bottom: 15px;
+    // }
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .container_info {
-        margin-bottom: 25px;
+        padding: 25px var(--container-padding);
+        // background: rgba($color: $whitetiffany, $alpha: 0.6);
+        // background: gray;
     }
     &_logo {
-        max-width: 350px;
-    }
-    .backinfo {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-        &_top {
-            display: flex;
-            gap: 10px;
-            img {
-                width: 20px;
-                height: 20px;
-            }
+        img {
+            max-width: 100px;
         }
-        &_bottom {
-            display: flex;
-            gap: 40px;
-            p {
-                @extend .phones_p
-            }
+        h1 {
+            color: var(--tiffany);
+        }
+    }
+    // TODO: not used
+    // .backinfo {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: flex-end;
+    //     gap: 10px;
+    //     &_top {
+    //         display: flex;
+    //         gap: 10px;
+    //         align-items: center;
+    //         img {
+    //             width: 20px;
+    //             height: 20px;
+    //         }
+    //         p {
+    //             @include font(16px);
+    //             margin: 0;
+    //         }
+    //     }
+    //     &_bottom {
+    //         display: flex;
+    //         gap: 40px;
+    //         p {
+    //             @extend .phones_p
+    //         }
+    //     }
+    // }
+    &_phones {
+        display: flex;
+        gap: 15px;
+        p {
+            @extend .phones_p;
         }
     }
     &_navigation {
         // background: linear-gradient(#267831,#14601e);
-        background: linear-gradient(var(--lightgreen), var(--blackgreen));
+        // background: linear-gradient(var(--lightgreen), var(--blackgreen));
+        // background: linear-gradient(var(--darkblue), var(--red));
+        background: var(--tiffany);
         .headernav {
             &_ul {
                 display: flex;
@@ -53,19 +77,19 @@
                 }
                 li.active,
                 li:hover {
-                    background: var(--lightgreen);
+                    background: var(--orange);
                 }
             }
         }
         &_search {
-            position: relative;
+            display: flex;
             input {
                 color: var(--white);
-                background: #195820;
+                background: var(--orange);
                 padding: 10px;
                 border: none;
                 outline: none;
-                @include font(12px);
+                @include font(14px);
             }
             input::placeholder {
                 color: var(--white);
@@ -73,18 +97,28 @@
             input:focus {
                 background: var(--darkgreen);
             }
+            > div {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                background-color: var(--darkorange);
+            }
             input[type="submit"] {
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                margin-top: auto;
-                margin-bottom: auto;
-                right: 10px;
-                width: 20px;
-                height: 20px;
-                background: url(../img/search.svg);
-                background-size: 20px 20px;
+                right: 0;
+                left: 0;
+                // margin-top: auto;
+                // margin-bottom: auto;
+                margin: auto;
+                width: 30px;
+                height: 30px;
+                background-image: url(../img/search.svg);
+                background-size: 30px 30px;
                 background-repeat: no-repeat;
+                background-color: var(--darkorange);
+                cursor: pointer;
             }
         }
     }

@@ -1,0 +1,7 @@
+.about {
+    p {
+        strong {
+            @include font(16px, $fw: 600);
+        }
+    }
+} 

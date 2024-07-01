@@ -1,5 +1,5 @@
 import { newBannerSwiper } from "./bannerSwiper.js";
-import { newTeamSwiper } from "./teamSwiper.js";
+// import { newTeamSwiper } from "./teamSwiper.js";
 
 
 newBannerSwiper(document.querySelector(".swiper-section_swiper"), {
@@ -13,29 +13,31 @@ newBannerSwiper(document.querySelector(".swiper-section_swiper"), {
         "class": "active"
     },
     "autoPlay": true,
-    "autoPlayTime": 5000
+    "autoPlayTime": 10000
 });
 
-newTeamSwiper(document.querySelector(".team_swiper"), {
-    "parent": document.querySelector(".team"),
-    "slideClass": "swiper_body_slide",
-    "pagination": false,
-    "swipe": {
-        "swipe": "tranlate"
-    },
-    "autoPlay": false,
-    "nSlideSimultaneously": 4,
-    "arrow": {
-        "leftArrowClass": "swiper_prev",
-        "rightArrowClass": "swiper_next"
-    },
-    "more": {
-        "varPadding": "--team_swiper-padding",
-        "varGap": "--team_swiper-gap",
-        "varWidth": "--team_slide-width"
 
-    }
-});
+// TODO: not useed
+// newTeamSwiper(document.querySelector(".team_swiper"), {
+//     "parent": document.querySelector(".team"),
+//     "slideClass": "swiper_body_slide",
+//     "pagination": false,
+//     "swipe": {
+//         "swipe": "tranlate"
+//     },
+//     "autoPlay": false,
+//     "nSlideSimultaneously": 5,
+//     "arrow": {
+//         "leftArrowClass": "swiper_prev",
+//         "rightArrowClass": "swiper_next"
+//     },
+//     "more": {
+//         "varPadding": "--team_swiper-padding",
+//         "varGap": "--team_swiper-gap",
+//         "varWidth": "--team_slide-width"
+
+//     }
+// });
 
 // const swiper = new Swiper('.sample-slider', {
 //     loop: true, 

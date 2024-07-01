@@ -13,20 +13,8 @@
 			<article class="swiper-section">
 				<!-- TODO: ????????????????? -->
 				<header class="none"><h2>Слайдр банер</h2></header>
-				<div class="container">
-					<div class="swiper-section_swiper swiper">
-						<div class="swiper_body">
-							<div class="swiper_body_slide active"><img src="img/index_swiper1.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
-							<div class="swiper_body_slide"><img src="img/index_swiper2.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
-							<div class="swiper_body_slide"><img src="img/index_swiper3.jpg" alt=""><a href="" class="btn">Узнать больше</a></div>
-						</div>
-						<div class="swiper_navigation">
-							<div class="swiper_navigation_item active"></div>
-							<div class="swiper_navigation_item"></div>
-							<div class="swiper_navigation_item"></div>
-						</div>
-					</div>
-				</div>
+					@@include('html/pages/index/banner.html',{})
+
 			</article>
 			<div class="wrap container">
 				@@include('html/components/aside.html',{})
@@ -45,7 +33,10 @@
 							взрослого, так и детского населения.</p>
 						<a href="#" class="btn">Узнать больше</a>
 					</section>
-					<section class="team">
+
+					@@include('html/pages/index/team.html',{})
+					<!-- TODO: not used -->
+					<!-- <section class="team">
 						<header class="h2">
 							<h2>Наш коллектив</h2>
 						</header>
@@ -151,9 +142,10 @@
 								</div>
 							</div>
 						</div>
-					</section>
+					</section> -->
 					<div class="section_wrap">
-						<section class="news">
+						<!-- TODO: not used -->
+						<!-- <section class="news">
 							<header class="h2">
 								<h2>События</h2>
 							</header>
@@ -172,15 +164,17 @@
 								</li>
 							</ul>
 							<a href="#" class="btn">Все события</a>
-						</section>
-						<section class="blog">
+						</section> -->
+						@@include('html/pages/index/news.html',{})
+						<!-- <section class="blog">
 							<header class="h2"><h2>Статьи</h2></header>
 							<article class="blog_article">
 								<h3><a href="#">Лицо как зеркало недуга</a></h3>
 								<p>Не знаю, что и думать. У меня, зрелой женщины, неожиданно стали появляться угри, словно в подростковом возрасте. Пробовала традиционные средства борьбы с ними — ничего не помогает, а косметолог советует обратиться к дерматологу...</p>
 							</article>
 							<a href="" class="btn">Все статьи</a>
-						</section>
+						</section> -->
+						@@include('html/pages/index/blog.html',{})
 					</div>
 				</div>
 			</div>

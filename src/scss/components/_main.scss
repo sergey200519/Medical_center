@@ -1,6 +1,7 @@
 * {
   font-family: "Roboto", sans-serif;
   transition: 0.8s;
+  @include font(16px);
 }
 
 .wrapper {
@@ -10,6 +11,7 @@
 }
 .main {
   flex: 1 1 auto;
+  background: var(--whitegray);
 }
 .container {
   max-width: 1920px;
@@ -30,18 +32,24 @@
   @include btn();
 }
 .btn:hover {
-  @include btn($background: linear-gradient(#b1e16e,#97c752));
+  @include btn($background: linear-gradient(var(--orange), var(--darkorange)));
 }
 p {
   @include font(14px);
   margin-bottom: 20px;
 }
+h1 {
+  @include font(40px, $fw: 700);
+}
 .h2,
 .h2 h2 {
   @include font(24px, $fw: 700);
-  color: var(--blackgreen);
-  margin-bottom: 24px;
+  color: var(--tiffany);
+  margin-bottom: 15px;
 }
 section {
   margin-bottom: var(--section_gap);
+}
+a {
+  cursor: pointer;
 }

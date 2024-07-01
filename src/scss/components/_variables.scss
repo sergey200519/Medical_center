@@ -1,25 +1,53 @@
+// scss variables
+$whitetiffany: #abdcdc;
+
+
 :root {
+    // section <--- main --->
+    // font
     --main_font-family: "Roboto", sans-serif;
-
+    // container
     --container-padding: 25px;
-
+    // section
     --section_gap: 30px;
- 
+    // li
     --li_active_before_top: 0;
+    // border
+    --border-radius: 3px;
+    // aside
+    --subtitle-height: 0px;
 
-    // index
+
+
+    // section <--- index --->
     --team_swiper-padding: 25px;
     --team_slide-width: 150px;
     --team_swiper-gap: 0;
 
-    // colors
+
+
+    // section <--- colors --->
+    // white
     --white: #fff;
+    // black
     --black: #000;
+    // gray
     --gray: #aca1a1;
     --lightgray: #e5e5e5;
     --whitegray: #f7f7f7;
     --darkgray: #565656;
+    // green
     --lightgreen: #8ec63f;
     --darkgreen: #267831;
     --blackgreen: #14601e;
+    // red
+    --red: #FF0000;
+    // orange
+    --orange: #ed6a01;
+    --darkorange: #ac560f;
+    // blue
+    --darkblue: #004695;
+    // tiffany
+    --whitetiffany: #abdcdc;
+    --tiffany:  #0cb8b6;
 }

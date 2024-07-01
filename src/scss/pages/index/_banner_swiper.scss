@@ -1,12 +1,12 @@
 .swiper-section {
+    position: relative;
     background: var(--lightgray);
     height: fit-content;
-    padding: var(--section_gap) 0 var(--section_gap) 0;
     .swiper {
-        max-width: 1280px;
+        width: 100%;
         margin: 0 auto;
         background: var(--white);
-        padding: 15px;
+        // padding: 15px;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -18,11 +18,28 @@
                 left: 0;
                 width: 100%;
                 opacity: 0;
-                height: fit-content;
+                height: 800px;
                 transition: 3s;
+                overflow: hidden;
                 img {
                     width: 100%;
-                    object-fit: contain;
+                    height: 800px;
+                    object-fit: cover;
+                }
+                &-info {
+                    position: absolute;
+                    top: 30px;
+                    right: 40px;
+                    max-width: 60%;
+                    h2 {
+                        @include font(48px, $fw: 800);
+                        color: var(--white);
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        @include font(22px, $fw: 600);
+                        color: var(--black);
+                    }
                 }
                 a {
                     position: absolute;
@@ -36,6 +53,12 @@
             }
         }
         &_navigation {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            bottom: 10px;
             display: flex;
             gap: 10px;
             width: fit-content;
@@ -44,13 +67,13 @@
                 width: 15px;
                 height: 15px;
                 border-radius: 50%;
-                background: var(--gray);
+                background: var(--tiffany);
                 cursor: pointer;
                 transition: 3s;
             }
             &_item.active,
             &_item:hover {
-                background: var(--lightgreen);
+                background: var(--orange);
             }
         }
     }

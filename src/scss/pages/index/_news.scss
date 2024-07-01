@@ -5,16 +5,24 @@
         gap: 10px;
         margin-bottom: 15px;
         &_item {
-            background: var(--whitegray);
-            padding: 10px 15px;
-            time {
-                @include font(14px);
-                color: var(--gray);
+            background: var(--lightgray);
+            a {
+                display: block;
+                width: 100%;
+                padding: 10px 15px;
+                time {
+                    @include font(14px);
+                    color: var(--gray);
+                }
+                h3 {
+                    @include font(16px);
+                    // color: var(--blackgreen);
+                    color: var(--tiffany);
+                }
             }
-            h3 {
-                @include font(16px);
-                color: var(--blackgreen);
-            }
+        }
+        &_item:hover {
+            background: linear-gradient(var(--whitegray), var(--lightgray));
         }
     }
 }

@@ -1,32 +1,42 @@
 class AsideMenu {
     menuItems: NodeListOf<HTMLElement>;
+    oldMenuItems: HTMLElement;
     constructor(asideMenu: HTMLElement) {
         this.menuItems = asideMenu.querySelectorAll(":scope > li");
-        console.log(this.menuItems);
 
         const self = this;
         [...this.menuItems].map((item) => item.addEventListener("click", self.render.bind(self)));
         this.hide();
+
+        this.oldMenuItems;
     }
     render(e: Event): void {
         e.preventDefault();
-        this.hide();
-        [...this.menuItems].map((item) => item.classList.remove("active"));
-        const li = (e.target as HTMLElement).closest("li");
-        //const liHeight = li.getBoundingClientRect().height;
-        li.classList.add("active");
-        // TODO magic number
-        //document.documentElement.style.setProperty("--li_active_before_top", `${liHeight / 2 - (20 / 2)}px`)
-        (li.querySelector("[class*='sub']") as HTMLElement).style.maxHeight = `${li.scrollHeight + 20}px`
+        const element: HTMLElement = e.target as HTMLElement;
+        const menuItem: HTMLElement = element.closest("li");
+        const submenu: HTMLElement =  menuItem.querySelector("menu");
+        if (this.oldMenuItems == menuItem) {
+            return;
+        }
+        // this.hide();
+        
+        submenu.classList.remove("none");
+        menuItem.classList.add("active");
+        const menuItemHeight: number = menuItem.getBoundingClientRect().height;
+        submenu.style.height = `${menuItemHeight * submenu.querySelectorAll("li").length}px`;
+        this.oldMenuItems = menuItem;
     }
 
     hide() {
-        [...this.menuItems].forEach(element => {
-            element.querySelector("menu").style.maxHeight = "0px";
+        [...this.menuItems].forEach((element: HTMLElement):  void => {
+            const submenu: HTMLElement = element.querySelector(".submenu");
+            element.classList.remove("active");
+            submenu.classList.add("none");
         });
     }
 }
 
-export function new_aside(asideMenu: HTMLElement) {
+export function newAside(asideMenu: HTMLElement) {
     return new AsideMenu(asideMenu);
 }
+

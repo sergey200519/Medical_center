@@ -4,9 +4,12 @@
         border: 1px solid var(--lightgray);
         margin-bottom: 15px;
         h3 {
-            @include font(16px, $fw: 500);
-            color: var(--blackgreen);
             margin-bottom: 15px;
+            a {
+                @include font(18px, $fw: 600);
+                // color: var(--blackgreen);
+                color: var(--tiffany);
+            }
         }
         p {
             @include font(14px, $fw: 400);
