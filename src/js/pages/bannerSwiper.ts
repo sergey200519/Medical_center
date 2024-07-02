@@ -21,7 +21,7 @@ class BannerSwiper extends SwiperBase {
         }
         setTimeout(() => {
             this.swiperBody.style.height = `${this.activeSlide.getBoundingClientRect().height}px`;
-        }, 3000);
+        }, 5000);
     }
 
     nextSlide() {
