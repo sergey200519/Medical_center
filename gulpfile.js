@@ -66,7 +66,10 @@ export { deployFTP };
 gulp.task('default', dev);
 
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*', {
+    sourcemaps: true,
+    encoding: false
+  })
     .pipe(ghPages());
 });
