@@ -2,6 +2,9 @@ import gulp from 'gulp'; // Основной модуль
 import { path } from './gulp/config/path.js'; // Импорт путей
 import { plugins } from './gulp/config/plugins.js'; // Импорт общих плагинов
 
+import ghPages from "gulp-gh-pages";
+
+
 // Передаем значения в глобальную переменную и добавляем комментарий для eslint:
 /* global global process*/
 global.app = {
@@ -61,3 +64,9 @@ export { deployFTP };
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev);
+
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});

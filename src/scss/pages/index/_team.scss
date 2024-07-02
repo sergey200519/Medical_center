@@ -4,6 +4,12 @@
         grid-template-columns: repeat(4, 200px);
         gap: 20px;
         justify-content: space-between;
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(3, 200px);
+        }
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 200px);
+        }
         &_item {
             // border: 1px solid #e5e5e5;
             a {
