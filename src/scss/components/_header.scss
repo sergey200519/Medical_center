@@ -1,4 +1,5 @@
 .topheader {
+    background: var(--page-background);
     .container {
         display: flex;
         justify-content: space-between;
@@ -7,24 +8,51 @@
     .container_info {
         padding: 25px var(--container-padding);
     }
+    &_mobile {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        @media (max-width: 1024px) {
+            display: flex;
+        }
+        span {
+            width: 40px;
+            height: 5px;
+            background: var(--darkblue);
+        }
+        span:nth-child(1) {
+            background: linear-gradient(var(--darkblue), var(--darkpink));
+        }
+        span:nth-child(2) {
+            background: var(--darkpink);
+        }
+        span:nth-child(3) {
+            background: linear-gradient(var(--darkpink), var(--darkblue));
+        }
+    }
     &_logo {
-        img {
-            max-width: 100px;
-        }
-        h1 {
-            color: var(--tiffany);
-        }
+        @extend .logo_topheader;
     }
     &_phones {
         display: flex;
         gap: 15px;
+        @media (max-width: 1024px) {
+            display: none;
+        }
         p {
             @extend .phones_p;
         }
     }
     &_navigation {
-        background: var(--tiffany);
+        background: var(--darkblue);
+        @media (max-width: 1024px) {
+            padding: 10px 0;
+        }
         .headernav {
+            @media (max-width: 1024px) {
+                display: none;
+            }
             &_ul {
                 display: flex;
                 li {
@@ -37,19 +65,31 @@
                 }
                 li.active,
                 li:hover {
-                    background: var(--orange);
+                    background: var(--white);
+                    a {
+                        background: rgba($color: $darkblue, $alpha: 0.8);
+                    }
+                    // background: rgba(hexToRGB($darkblue), 0.5);
                 }
             }
         }
         &_search {
             display: flex;
+            background: var(--white);
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
             input {
                 color: var(--white);
                 background: var(--orange);
+                background: rgba($color: $darkblue, $alpha: 0.8);
                 padding: 10px;
                 border: none;
                 outline: none;
                 @include font(14px);
+                @media (max-width: 1024px) {
+                    width: 100%;
+                }
             }
             input::placeholder {
                 color: var(--white);
@@ -61,7 +101,7 @@
                 position: relative;
                 width: 40px;
                 height: 40px;
-                background-color: var(--darkorange);
+                background: rgba($color: $darkblue, $alpha: 0.9);
             }
             input[type="submit"] {
                 position: absolute;
@@ -77,7 +117,7 @@
                 background-image: url(../img/search.svg);
                 background-size: 30px 30px;
                 background-repeat: no-repeat;
-                background-color: var(--darkorange);
+                background-color: rgba($color: $darkblue, $alpha: 0);
                 cursor: pointer;
             }
         }

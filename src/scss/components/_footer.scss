@@ -5,6 +5,10 @@
         display: flex;
         justify-content: space-between;
         gap: 15px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &_left {
         &_copyright {
@@ -14,7 +18,7 @@
         &_address {
             margin-bottom: 15px;
             a {
-                color: var(--tiffany);
+                color: var(--darkblue);
                 @include font(16px, $fw: 400);
             }
             a:hover,
@@ -42,10 +46,16 @@
         flex-direction: column;
         gap: 15px;
         align-items: flex-end;
+        @media (max-width: 768px) {
+            align-items: flex-start;
+        }
         &_phones {
             display: flex;
             gap: 20px;
             align-items: center;
+            @media (max-width: 768px) {
+                flex-direction: row-reverse;
+            }
             img {
                 width: 30px;
             }

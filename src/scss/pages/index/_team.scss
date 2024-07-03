@@ -10,6 +10,10 @@
         @media (max-width: 1024px) {
             grid-template-columns: repeat(2, 200px);
         }
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 150px);
+            gap: 5px;
+        }
         &_item {
             // border: 1px solid #e5e5e5;
             a {

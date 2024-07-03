@@ -1,9 +1,19 @@
 .phones_p {
-    color: var(--tiffany);
+    color: var(--darkblue);
     @include font(20px, 700);
     margin: 0;
     span {
-        color: var(--orange);
+        color: var(--darkpink);
         @include font(20px, 700);
+    }
+}
+
+
+.logo_topheader {
+    img {
+        max-width: 100px;
+    }
+    h1 {
+        color: var(--darkblue);
     }
 }

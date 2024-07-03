@@ -3,6 +3,11 @@
   transition: 0.8s;
   @include font(16px);
 }
+// *::selection {
+//   color: var(--darkpink);
+//   color: rgba($color: $darkpink, $alpha: .8);
+//   background: rgba($color: $darkblue, $alpha: .5);
+// }
 
 .wrapper {
   display: flex;
@@ -11,7 +16,7 @@
 }
 .main {
   flex: 1 1 auto;
-  background: var(--whitegray);
+  background: var(--page-background);
 }
 .container {
   max-width: 1920px;
@@ -22,6 +27,10 @@
   display: flex;
   gap: 60px;
   padding: 30px 25px 30px 25px;
+  @media (max-width: 568px) {
+    flex-direction: column;
+    padding: 30px var(--container-padding);
+  }
 }
 .none {
   display: none;
@@ -32,7 +41,7 @@
   @include btn();
 }
 .btn:hover {
-  @include btn($background: linear-gradient(var(--orange), var(--darkorange)));
+  background: rgba($color: $darkblue, $alpha: 0.8);
 }
 p {
   @include font(14px);
@@ -40,11 +49,14 @@ p {
 }
 h1 {
   @include font(40px, $fw: 700);
+  @media (max-width: 568px) {
+    font-size: 34px;
+  }
 }
 .h2,
 .h2 h2 {
   @include font(24px, $fw: 700);
-  color: var(--tiffany);
+  color: var(--darkblue);
   margin-bottom: 15px;
 }
 section {

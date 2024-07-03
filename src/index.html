@@ -7,13 +7,19 @@
 @@include('html/components/head.html',{"title": "Главная", "more": ""})
 
 <body>
+	@@include('html/components/mobileMenu.html',{})
 	<div class="wrapper">
 		@@include('html/components/header.html',{})
 		<main class="main">
 			<article class="swiper-section">
 				<!-- TODO: ????????????????? -->
-				<header class="none"><h2>Слайдр банер</h2></header>
+				<div class="container">
+					<header class="none">
+						<h2>Слайдр банер</h2>
+					</header>
 					@@include('html/pages/index/banner.html',{})
+				</div>
+
 
 			</article>
 			<div class="wrap container">
@@ -35,7 +41,7 @@
 					</section>
 
 					@@include('html/pages/index/team.html',{})
-					
+
 					<div class="section_wrap">
 						@@include('html/pages/index/news.html',{})
 						@@include('html/pages/index/blog.html',{})

@@ -1,9 +1,12 @@
 // scss variables
-$whitetiffany: #abdcdc;
-
+$darkblue: #024897;
+$darkpink: #ff0e52;
+$black: #000;
 
 :root {
     // section <--- main --->
+    // page
+    --page-background: #{rgba($color: $darkblue, $alpha: 0.1)};
     // font
     --main_font-family: "Roboto", sans-serif;
     // container
@@ -17,20 +20,16 @@ $whitetiffany: #abdcdc;
     // aside
     --subtitle-height: 0px;
 
-
-
     // section <--- index --->
     --team_swiper-padding: 25px;
     --team_slide-width: 150px;
     --team_swiper-gap: 0;
 
-
-
     // section <--- colors --->
     // white
     --white: #fff;
     // black
-    --black: #000;
+    --black: #{$black};
     // gray
     --gray: #aca1a1;
     --lightgray: #e5e5e5;
@@ -41,13 +40,32 @@ $whitetiffany: #abdcdc;
     --darkgreen: #267831;
     --blackgreen: #14601e;
     // red
-    --red: #FF0000;
+    --red: #ff0000;
+    --darkred: #b92426;
+    // pink
+    --darkpink: #{$darkpink};
     // orange
     --orange: #ed6a01;
     --darkorange: #ac560f;
     // blue
-    --darkblue: #004695;
+    --darkblue: #{$darkblue};
     // tiffany
     --whitetiffany: #abdcdc;
-    --tiffany:  #0cb8b6;
+    --tiffany: #0cb8b6;
+}
+
+@media (max-width: 568px) {
+    :root {
+        // section <--- main --->
+        // container
+        --container-padding: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        // section <--- main --->
+        // container
+        --container-padding: 5px;
+    }
 }

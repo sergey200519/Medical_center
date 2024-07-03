@@ -5,23 +5,29 @@ class BannerSwiper extends SwiperBase {
     constructor(swiper: HTMLElement, options: Options) {
         super(swiper, options);
         this.swiperBody = swiper.querySelector("div[class$='body']");
-        console.log("tyt");
         this.setHeightBody();
 
         const self: BannerSwiper = this;
         [...this.swiperPaginationItems].map((item) => item.addEventListener("click", self.clickNavigation.bind(self)));
 
         window.addEventListener("resize", self.changeWidth.bind(self));
+
+        setInterval(self.checkHeight.bind(self), 1000);
     }
 
     setHeightBody() {
-        console.log("set");
         if (this.swiperBody == undefined) {
             this.swiperBody = this.swiper.querySelector("div[class$='body']");
         }
-        setTimeout(() => {
-            this.swiperBody.style.height = `${this.activeSlide.getBoundingClientRect().height}px`;
-        }, 10000);
+        this.swiperBody.style.height = `${this.activeSlide.getBoundingClientRect().height}px`;
+
+    }
+
+    checkHeight() {
+        if (this.swiperBody.getBoundingClientRect().height != this.activeSlide.getBoundingClientRect().height) {
+            this.setHeightBody();
+            console.log("checkHeight");
+        }
     }
 
     nextSlide() {
@@ -41,7 +47,7 @@ class BannerSwiper extends SwiperBase {
         this.swiperPaginationItemActive = this.swiperPaginationItems[nSlide];
         this.swiperPaginationItemActive.classList.add("active");
 
-        this.nActiveSlide = nSlide; 
+        this.nActiveSlide = nSlide;
     }
 
     clickNavigation(e: Event) {

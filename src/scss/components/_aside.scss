@@ -12,10 +12,11 @@
             }
             .active,
             a:hover {
-                background: var(--orange);
+                background: rgba($color: $darkblue, $alpha: 0.8);
             }
             &_link {
-                background: var(--tiffany);
+                background: var(--darkblue);
+                color: var(--white);
             }
             .submenu {
                 height: 0;
@@ -23,10 +24,11 @@
                 transition: .8s;
                 li {
                     a {
-                        background: var(--whitetiffany);
+                        background: rgba($color: $darkblue, $alpha: 0.7);
+                        color: var(--white);
                     }
                     a:hover {
-                        background: var(--orange);
+                        background: rgba($color: $darkblue, $alpha: 0.9);
                     }
                 }
             }
