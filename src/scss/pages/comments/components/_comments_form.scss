@@ -1,0 +1,11 @@
+.comments-form {
+    &_form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        &_name {
+            padding: 15px 30px;
+            border: 1px rgba($color: var(--gray), $alpha: 1.0) solid;
+        }
+    }
+}

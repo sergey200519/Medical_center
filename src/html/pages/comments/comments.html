@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../../../html/components/_head.html',
+@@include('@@pagesPath/html/components/_head.html',
 {
 	"title": "Главная", 
-	"more": "<link rel=\"stylesheet\" href=\"css/pages/index/index.min.css\"/>",
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/comments/comments.min.css\"/>",
     "page": "pages"
 })
 
 <body>
-	@@include('../../../html/components/_mobileMenu.html',{
+	@@include('@@pagesPath/html/components/_mobileMenu.html',{
         "page": "index"
     })
 	<div class="wrapper">
-		@@include('../../../html/components/_header_info.html',{
+		@@include('@@pagesPath/html/components/_header_info.html',{
             "page": "comments"
         })
 
-		@@include('../../../html/components/_header.html',{
+		@@include('@@pagesPath/html/components/_header.html',{
             "page": "comments"
         })
 
 		<main class="wrap container">
-			@@include('../../../html/components/_aside.html',{
+			@@include('@@pagesPath/html/components/_aside.html',{
                 "page": "comments"
             })
 			<div class="content">
-				comments
+				@@include('components/_comments_form.html',{})
 			</div>
 		</main>
 
 
 
-		@@include('../../../html/components/_footer.html',{
+		@@include('@@pagesPath/html/components/_footer.html',{
             "page": "comments"
         })
 	</div>
