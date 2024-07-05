@@ -1,57 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-<!-- @@include('html/components/head.html',{
-"title": "Главная",
-"more": "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css\">"
-}) -->
 @@include('html/components/head.html',{"title": "Главная", "more": ""})
 
 <body>
 	@@include('html/components/mobileMenu.html',{})
 	<div class="wrapper">
-		@@include('html/components/header.html',{})
-		<main class="main">
-			<article class="swiper-section">
-				<!-- TODO: ????????????????? -->
-				<div class="container">
-					<header class="none">
-						<h2>Слайдр банер</h2>
-					</header>
-					@@include('html/pages/index/banner.html',{})
-				</div>
-
-
-			</article>
-			<div class="wrap container">
-				@@include('html/components/aside.html',{})
-				<div class="content">
-					<section class="about">
-						<!-- TODO: возможно это не нужно -->
-						<header class="none">
-							<h2>О нас</h2>
-						</header>
-						<p><strong>Медицинский центр «Врачеватель»</strong> — это современная многопрофильная клиника,
-							оснащённая новейшим оборудованием ведущих мировых производителей. Начав свою деятельность в
-							Пушкинском районе Московской области в 1995 году, наши врачи оказали помощь более чем 50 000
-							пациентов.</p>
-						<p>Сегодня Медицинский центр «Врачеватель» осуществляет полный комплекс высококачественных
-							амбулаторно-поликлинических услуг, направленных на укрепление и восстановление здоровья, как
-							взрослого, так и детского населения.</p>
-						<a href="#" class="btn">Узнать больше</a>
-					</section>
-
-					@@include('html/pages/index/team.html',{})
-
-					<div class="section_wrap">
-						@@include('html/pages/index/news.html',{})
-						@@include('html/pages/index/blog.html',{})
-					</div>
-
-					@@include('html/components/services.html',{})
-				</div>
-			</div>
-		</main>
-		@@include('html/components/footer.html',{})
+		
 	</div>
 
 
