@@ -6,12 +6,18 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 1280px) {
+            padding: 10px var(--container-padding);
+        }
     }
     &_mobile {
         display: none;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
+        @media (max-width: 1280px) {
+            display: flex;
+        }
         span {
             width: 40px;
             height: 5px;
@@ -30,10 +36,16 @@
     &_logo {
         @extend .logo_topheader;
         margin: 10px 0;
+        @media (max-width: 1280px) {
+            display: none;
+        }
     }
     .headernav {
         display: block;
         align-self: stretch;
+        @media (max-width: 1280px) {
+            display: none;
+        }
         &_ul {
             display: flex;
             height: 100%;
@@ -57,7 +69,6 @@
                 a {
                     color: var(--white);
                 }
-                // background: rgba(hexToRGB($darkblue), 0.5);
             }
         }
     }
@@ -65,7 +76,7 @@
         display: flex;
         background: var(--white);
         @media (max-width: 1024px) {
-            width: 100%;
+            width: 80%;
         }
         input {
             color: var(--white);

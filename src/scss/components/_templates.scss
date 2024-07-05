@@ -1,13 +1,12 @@
 .phones_p {
     color: var(--darkblue);
-    @include font(var(--normal-fz), 700);
+    @include font(var(--big-fz), 700);
     margin: 0;
     span {
         color: var(--darkpink);
-        @include font(var(--normal-fz), 700);
+        @include font(var(--big-fz), 700);
     }
 }
-
 
 .logo_topheader {
     img {
@@ -15,5 +14,21 @@
     }
     h1 {
         color: var(--darkblue);
+    }
+}
+
+.stomatology-laboratory_services {
+    display: flex;
+    flex-direction: column;
+    li {
+        width: 100%;
+        a {
+            display: block;
+            padding: 10px 20px;
+        }
+        a:hover {
+            color: var(--white);
+            background: var(--darkblue);
+        }
     }
 }

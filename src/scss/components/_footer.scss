@@ -12,14 +12,14 @@
     }
     &_left {
         &_copyright {
-            @include font(14px, $fw: 400);
+            @include font(var(--small-fz), $fw: 400);
             margin-bottom: 15px;
         }
         &_address {
             margin-bottom: 15px;
             a {
                 color: var(--darkblue);
-                @include font(16px, $fw: 400);
+                @include font(var(--normal-fz), $fw: 400);
             }
             a:hover,
             a:focus {
@@ -28,7 +28,7 @@
         }
         > span {
             display: block;
-            @include font(14px, $fw: 400);
+            @include font(var(--small-fz), $fw: 400);
             margin-bottom: 10px;
         }
         &_cards {

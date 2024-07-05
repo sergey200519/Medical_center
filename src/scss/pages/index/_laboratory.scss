@@ -1,0 +1,9 @@
+.laboratory-section {
+    h2,
+    p, a {
+        text-align: right;
+    }
+    &_services {
+        @extend .stomatology-laboratory_services;
+    }
+}
