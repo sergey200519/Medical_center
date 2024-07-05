@@ -38,6 +38,6 @@ class MobileMenu {
     }
 }
 
-export function newMobileMenu(options: Options) {
+export function newMobileMenu(options: Options): MobileMenu {
     return new MobileMenu(options);
 }

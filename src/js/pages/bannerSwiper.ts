@@ -62,6 +62,6 @@ class BannerSwiper extends SwiperBase {
     }
 }
 
-export function newBannerSwiper(swiper: HTMLElement, options: Options) {
+export function newBannerSwiper(swiper: HTMLElement, options: Options): BannerSwiper {
     return new BannerSwiper(swiper, options);
 }

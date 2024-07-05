@@ -36,7 +36,7 @@ class AsideMenu {
     }
 }
 
-export function newAside(asideMenu: HTMLElement) {
+export function newAside(asideMenu: HTMLElement): AsideMenu {
     return new AsideMenu(asideMenu);
 }
 
