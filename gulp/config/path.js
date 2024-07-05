@@ -20,7 +20,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/**/[^_]*.scss`,
-    html: `${srcFolder}/*.html`,// меняем расширение на pug если сборка на нём
+    html: `${srcFolder}/**/[^_]*.html`,// меняем расширение на pug если сборка на нём
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/img/svgicons/*.svg`
   },

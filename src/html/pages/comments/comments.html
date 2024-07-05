@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../../../html/components/_head.html',
+{
+	"title": "Главная", 
+	"more": "<link rel=\"stylesheet\" href=\"css/pages/index/index.min.css\"/>",
+    "page": "pages"
+})
+
+<body>
+	@@include('../../../html/components/_mobileMenu.html',{
+        "page": "index"
+    })
+	<div class="wrapper">
+		@@include('../../../html/components/_header_info.html',{
+            "page": "comments"
+        })
+
+		@@include('../../../html/components/_header.html',{
+            "page": "comments"
+        })
+
+		<main class="wrap container">
+			@@include('../../../html/components/_aside.html',{
+                "page": "comments"
+            })
+			<div class="content">
+				comments
+			</div>
+		</main>
+
+
+
+		@@include('../../../html/components/_footer.html',{
+            "page": "comments"
+        })
+	</div>
+	<script defer type="module" src="js/script.min.js"></script>
+	<script defer type="module" src="js/pages/index.min.js"></script>
+</body>
+
+</html>

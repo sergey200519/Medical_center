@@ -8,7 +8,9 @@
         <div class="mobile_body_navigation">
             <nav class="mobile_body_navigation_nav">
                 <ul>
-                    @@include('headerMenuItems.html',{})
+                    @@include('_headerMenuItems.html',{
+                        "page": "@@page"
+                      })
                 </ul>
             </nav>
         </div>

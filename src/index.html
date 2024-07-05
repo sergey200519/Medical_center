@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/components/head.html',
+@@include('html/components/_head.html',
 {
 	"title": "Главная", 
-	"more": "<link rel=\"stylesheet\" href=\"css/pages/index/index.min.css\"/>"
+	"more": "<link rel=\"stylesheet\" href=\"css/pages/index/index.min.css\"/>",
+	"page": "index"
 })
 
 <body>
-	@@include('html/components/mobileMenu.html',{})
+	@@include('html/components/_mobileMenu.html',{
+		"page": "index"
+	})
 	<div class="wrapper">
-		@@include('html/components/header_info.html',{})
-		@@include('html/pages/index/banner.html',{})
+		@@include('html/components/_header_info.html',{
+			"page": "index"
+		})
+		@@include('html/pages/index/_banner.html',{})
 
-		@@include('html/components/header.html',{})
+		@@include('html/components/_header.html',{
+			"page": "index"
+		})
 
 		<main class="wrap container">
-			@@include('html/components/aside.html',{})
+			@@include('html/components/_aside.html',{
+				"page": "index"
+			})
 			<div class="content">
-				@@include('html/pages/index/about.html',{})
+				@@include('html/pages/index/_about.html',{})
 				<div class="two_sections_index">
 					<div class="">
-						@@include('html/pages/index/stomatology.html',{})
+						@@include('html/pages/index/_stomatology.html',{})
 					</div>
 					<div class="">
-						@@include('html/pages/index/laboratory.html',{})
+						@@include('html/pages/index/_laboratory.html',{})
 					</div>
 				</div>
 			</div>
@@ -31,7 +40,9 @@
 
 
 
-		@@include('html/components/footer.html',{})
+		@@include('html/components/_footer.html',{
+			"page": "index"
+		})
 	</div>
 	<script defer type="module" src="js/script.min.js"></script>
 	<script defer type="module" src="js/pages/index.min.js"></script>

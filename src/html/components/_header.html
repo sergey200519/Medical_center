@@ -6,12 +6,19 @@
         <span></span>
       </div>
       <div class="topheader_logo">
-        <img src="img/sity_logo.png" alt="">
+        @@if (page === "index") {
+          <img src="img/sity_logo.png" alt="">
+        }
+        @@if (page !== "index") {
+          <img src="@@pagesPath/img/sity_logo.png" alt="">
+        }
         <h1>Стоматология</h1>
       </div>
       <nav class="topheader_navigation headernav">
         <ul class="headernav_ul">
-          @@include('headerMenuItems.html',{})
+          @@include('_headerMenuItems.html',{
+            "page": "@@page"
+          })
         </ul>
       </nav>
       <form action="" class="topheader_search">

@@ -1,0 +1,51 @@
+<footer class="sitefooter">
+	<div class="container">
+		<div class="sitefooter_left">
+			<p class="sitefooter_left_copyright">
+				© 2019 - 2024 Стоматология «Дента Лайн»
+			</p>
+			<address class="sitefooter_left_address">
+				<a href="#">Г. Балашиха, Микрорайон 1 Мая, д. 9</a>
+			</address>
+			<span>Мы принимаем к оплате:</span>
+			<div class="sitefooter_left_cards">
+				@@if (page === "index") {
+                    <img src="img/visa_card.png" alt="карта виза">
+					<img src="img/mastercard.png" alt="мастер карта">
+					<img src="img/maestro_card.png" alt="карта маестро">
+                }
+                @@if (page !== "index") {
+					<img src="@@pagesPath/img/visa_card.png" alt="карта виза">
+					<img src="@@pagesPath/img/mastercard.png" alt="мастер карта">
+					<img src="@@pagesPath/img/maestro_card.png" alt="карта маестро">
+                }
+			</div>
+		</div>
+		<div class="sitefooter_right">
+			<div class="sitefooter_right_phones">
+				@@if (page === "index") {
+                    <img src="img/phone.png" alt="">
+                }
+                @@if (page !== "index") {
+					<img src="@@pagesPath/img/phone.png" alt="">
+                }
+				<div class="">
+					<p><span>(980)</span> 460-52-33</p>
+					<p><span>(800)</span> 100-36-30</p>
+				</div>
+			</div>
+			<div class="sitefooter_right_social">
+				@@if (page === "index") {
+                    <a href="#"><img src="img/telegram.svg" alt=""></a>
+					<a href="#"><img src="img/whatsapp.svg" alt=""></a>
+					<a href="#"><img src="img/facebook.svg" alt=""></a>
+                }
+                @@if (page !== "index") {
+					<a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
+					<a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
+					<a href="#"><img src="@@pagesPath/img/facebook.svg" alt=""></a>
+                }
+			</div>
+		</div>
+	</div>
+</footer>
