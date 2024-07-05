@@ -1,14 +1,12 @@
-// scss variables
-$darkblue: #024897;
-$darkpink: #ff0e52;
-$black: #000;
-
 :root {
     // section <--- main --->
     // page
     --page-background: #{rgba($color: $darkblue, $alpha: 0.1)};
     // font
     --main_font-family: "Roboto", sans-serif;
+    --small-fz: 16px;
+    --normal-fz: 18px;
+    --big-fz: 20px;
     // container
     --container-padding: 25px;
     // section

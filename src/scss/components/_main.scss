@@ -1,7 +1,7 @@
 * {
   font-family: "Roboto", sans-serif;
   transition: 0.8s;
-  @include font(16px);
+  @include font(var(--normal-fz));
 }
 // *::selection {
 //   color: var(--darkpink);
@@ -13,11 +13,12 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-}
-.main {
-  flex: 1 1 auto;
   background: var(--page-background);
 }
+// .main {
+//   flex: 1 1 auto;
+  
+// }
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -43,10 +44,6 @@
 .btn:hover {
   background: rgba($color: $darkblue, $alpha: 0.8);
 }
-p {
-  @include font(14px);
-  margin-bottom: 20px;
-}
 h1 {
   @include font(40px, $fw: 700);
   @media (max-width: 568px) {
@@ -55,7 +52,7 @@ h1 {
 }
 .h2,
 .h2 h2 {
-  @include font(24px, $fw: 700);
+  @include font(28px, $fw: 800);
   color: var(--darkblue);
   margin-bottom: 15px;
 }

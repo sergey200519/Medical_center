@@ -1,5 +1,4 @@
 import { newBannerSwiper } from "./bannerSwiper.js";
-// import { newTeamSwiper } from "./teamSwiper.js";
 
 
 newBannerSwiper(document.querySelector(".swiper-section_swiper"), {

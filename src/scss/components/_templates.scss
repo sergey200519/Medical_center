@@ -1,10 +1,10 @@
 .phones_p {
     color: var(--darkblue);
-    @include font(20px, 700);
+    @include font(var(--normal-fz), 700);
     margin: 0;
     span {
         color: var(--darkpink);
-        @include font(20px, 700);
+        @include font(var(--normal-fz), 700);
     }
 }
 

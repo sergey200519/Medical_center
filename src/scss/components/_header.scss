@@ -1,21 +1,17 @@
 .topheader {
     background: var(--page-background);
+    background: linear-gradient(var(--page-background), rgba(255, 255, 255, 0));
     .container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-    .container_info {
-        padding: 25px var(--container-padding);
     }
     &_mobile {
         display: none;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        @media (max-width: 1024px) {
-            display: flex;
-        }
         span {
             width: 40px;
             height: 5px;
@@ -33,93 +29,84 @@
     }
     &_logo {
         @extend .logo_topheader;
+        margin: 10px 0;
     }
-    &_phones {
-        display: flex;
-        gap: 15px;
-        @media (max-width: 1024px) {
-            display: none;
-        }
-        p {
-            @extend .phones_p;
-        }
-    }
-    &_navigation {
-        background: var(--darkblue);
-        @media (max-width: 1024px) {
-            padding: 10px 0;
-        }
-        .headernav {
-            @media (max-width: 1024px) {
-                display: none;
-            }
-            &_ul {
-                display: flex;
-                li {
-                    a {
-                        display: block;
-                        padding: 16px 32px;
-                        color: var(--white);
-                        @include font(18px);
-                    }
-                }
-                li.active,
-                li:hover {
-                    background: var(--white);
-                    a {
-                        background: rgba($color: $darkblue, $alpha: 0.8);
-                    }
-                    // background: rgba(hexToRGB($darkblue), 0.5);
-                }
-            }
-        }
-        &_search {
+    .headernav {
+        display: block;
+        align-self: stretch;
+        &_ul {
             display: flex;
-            background: var(--white);
+            height: 100%;
+            li {
+                height: 100%;
+                a {
+                    display: flex;
+                    margin: auto;
+                    padding: 16px 32px;
+                    height: 100%;
+                    color: var(--darkblue);
+                    @include font(var(--normal-fz));
+                    span {
+                        margin: auto;
+                    }
+                }
+            }
+            li.active,
+            li:hover {
+                background: var(--darkblue);
+                a {
+                    color: var(--white);
+                }
+                // background: rgba(hexToRGB($darkblue), 0.5);
+            }
+        }
+    }
+    &_search {
+        display: flex;
+        background: var(--white);
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        input {
+            color: var(--white);
+            background: var(--orange);
+            background: rgba($color: $darkblue, $alpha: 0.8);
+            padding: 10px;
+            border: none;
+            outline: none;
+            @include font(14px);
             @media (max-width: 1024px) {
                 width: 100%;
             }
-            input {
-                color: var(--white);
-                background: var(--orange);
-                background: rgba($color: $darkblue, $alpha: 0.8);
-                padding: 10px;
-                border: none;
-                outline: none;
-                @include font(14px);
-                @media (max-width: 1024px) {
-                    width: 100%;
-                }
-            }
-            input::placeholder {
-                color: var(--white);
-            }
-            input:focus {
-                background: var(--darkgreen);
-            }
-            > div {
-                position: relative;
-                width: 40px;
-                height: 40px;
-                background: rgba($color: $darkblue, $alpha: 0.9);
-            }
-            input[type="submit"] {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                // margin-top: auto;
-                // margin-bottom: auto;
-                margin: auto;
-                width: 30px;
-                height: 30px;
-                background-image: url(../img/search.svg);
-                background-size: 30px 30px;
-                background-repeat: no-repeat;
-                background-color: rgba($color: $darkblue, $alpha: 0);
-                cursor: pointer;
-            }
+        }
+        input::placeholder {
+            color: var(--white);
+        }
+        input:focus {
+            background: var(--darkgreen);
+        }
+        > div {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: rgba($color: $darkblue, $alpha: 0.9);
+        }
+        input[type="submit"] {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            // margin-top: auto;
+            // margin-bottom: auto;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            background-image: url(../img/search.svg);
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-color: rgba($color: $darkblue, $alpha: 0);
+            cursor: pointer;
         }
     }
 }

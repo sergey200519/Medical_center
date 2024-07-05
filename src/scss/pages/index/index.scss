@@ -1,6 +1,8 @@
+@import "../../components/variables_scss";
+@import "../../components/mixins";
+@import "../../components/functions";
+@import "../../components/templates";
+
 @import "main";
 @import "banner_swiper";
-@import "about";
-@import "team";
-@import "news";
-@import "blog";
+@import "stomatology";

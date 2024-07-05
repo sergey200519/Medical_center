@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/components/head.html',{"title": "Главная", "more": ""})
+@@include('html/components/head.html',
+{
+	"title": "Главная", 
+	"more": "<link rel=\"stylesheet\" href=\"css/pages/index/index.min.css\"/>"
+})
 
 <body>
 	@@include('html/components/mobileMenu.html',{})
 	<div class="wrapper">
-		
+		@@include('html/components/header_info.html',{})
+		@@include('html/pages/index/banner.html',{})
+
+		@@include('html/components/header.html',{})
+
+		<main class="wrap container">
+			@@include('html/components/aside.html',{})
+			<div class="content">
+				@@include('html/pages/index/about.html',{})
+				<div class="two_sections_index">
+					<div class="">
+						@@include('html/pages/index/stomatology.html',{})
+					</div>
+					<div class="">
+						@@include('html/pages/index/laboratory.html',{})
+					</div>
+				</div>
+			</div>
+		</main>
+
+
+
+		@@include('html/components/footer.html',{})
 	</div>
-
-
 	<script defer type="module" src="js/script.min.js"></script>
 	<script defer type="module" src="js/pages/index.min.js"></script>
 </body>

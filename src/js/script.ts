@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "classHide": "none"
     });
 
-    newServices(document.querySelector(".services_wrap"), {
-        "classActivator": "active",
-        "tegAccordionItems": "li"
-    });
+    // newServices(document.querySelector(".services_wrap"), {
+    //     "classActivator": "active",
+    //     "tegAccordionItems": "li"
+    // });
 });

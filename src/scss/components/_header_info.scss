@@ -1,0 +1,34 @@
+.headerinfo {
+    // background: linear-gradient(var(--white), var(--darkblue));
+    background: var(--darkblue);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--container-padding);
+    }
+    &_address {
+        color: var(--white);
+    }
+    &_social {
+        display: flex;
+        gap: 5px;
+        a {
+            width: 32px;
+            height: 32px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &_phones {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        p {
+            @extend .phones_p;
+            color: var(--white);
+        }
+    }
+}

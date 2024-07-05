@@ -1,7 +1,8 @@
 .swiper-section {
     position: relative;
     height: fit-content;
-    background: linear-gradient($darkblue, rgba($color: $darkblue, $alpha: 0.01));
+    background: linear-gradient($darkblue, var(--page-background));
+    margin-bottom: 0;
     .container {
         @media (max-width: 1920px) {
             padding: 0;

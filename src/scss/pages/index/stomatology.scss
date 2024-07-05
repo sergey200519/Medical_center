@@ -1,0 +1,14 @@
+.stomatology-section {
+    &_services {
+        display: flex;
+        flex-direction: column;
+        a {
+            display: block;
+            padding: 10px 20px;
+        }
+        a:hover {
+            color: var(--white);
+            background: var(--darkblue);
+        }
+    }
+}

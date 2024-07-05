@@ -19,7 +19,7 @@ export const path = {
     ts: `${srcFolder}/js/**/*.ts`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
-    scss: `${srcFolder}/scss/style.scss`,
+    scss: `${srcFolder}/scss/**/[^_]*.scss`,
     html: `${srcFolder}/*.html`,// меняем расширение на pug если сборка на нём
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/img/svgicons/*.svg`
