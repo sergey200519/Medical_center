@@ -72,52 +72,7 @@
             }
         }
     }
-    &_search {
-        display: flex;
-        background: var(--white);
-        @media (max-width: 1024px) {
-            width: 80%;
-        }
-        input {
-            color: var(--white);
-            background: var(--orange);
-            background: rgba($color: $darkblue, $alpha: 0.8);
-            padding: 10px;
-            border: none;
-            outline: none;
-            @include font(14px);
-            @media (max-width: 1024px) {
-                width: 100%;
-            }
-        }
-        input::placeholder {
-            color: var(--white);
-        }
-        input:focus {
-            background: var(--darkgreen);
-        }
-        > div {
-            position: relative;
-            width: 40px;
-            height: 40px;
-            background: rgba($color: $darkblue, $alpha: 0.9);
-        }
-        input[type="submit"] {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            // margin-top: auto;
-            // margin-bottom: auto;
-            margin: auto;
-            width: 30px;
-            height: 30px;
-            background-image: url(../img/search.svg);
-            background-size: 30px 30px;
-            background-repeat: no-repeat;
-            background-color: rgba($color: $darkblue, $alpha: 0);
-            cursor: pointer;
-        }
+    &_appointment {
+        @extend .appointment_to_doctor;
     }
 }

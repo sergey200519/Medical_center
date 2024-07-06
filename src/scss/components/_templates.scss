@@ -32,3 +32,10 @@
         }
     }
 }
+
+.appointment_to_doctor {
+    padding: 15px 30px;
+    color: var(--white);
+    @include font(var(--big-fz), 600);
+    background: var(--darkpink);
+}
