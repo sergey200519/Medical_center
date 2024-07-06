@@ -1,6 +1,6 @@
 import { newAside } from "./modules/aside.js";
 import { newMobileMenu } from "./modules/mobileMenu.js";
-import { newServices } from "./modules/services.js";
+// import { newServices } from "./modules/services.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     newAside(document.querySelector(".asidemenu_menu"));

@@ -1,4 +1,4 @@
-import { SwiperBase, Options } from "../modules/swiperBase.js";
+import { SwiperBase, Options } from "../../../modules/swiperBase.js";
 
 class BannerSwiper extends SwiperBase {
     private swiperBody: HTMLElement;

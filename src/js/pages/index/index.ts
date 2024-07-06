@@ -1,4 +1,4 @@
-import { newBannerSwiper } from "./bannerSwiper.js";
+import { newBannerSwiper } from "./modules/bannerSwiper.js";
 
 
 newBannerSwiper(document.querySelector(".swiper-section_swiper"), {

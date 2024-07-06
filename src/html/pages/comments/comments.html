@@ -9,7 +9,7 @@
 
 <body>
 	@@include('@@pagesPath/html/components/_mobileMenu.html',{
-        "page": "index"
+        "page": "comments"
     })
 	<div class="wrapper">
 		@@include('@@pagesPath/html/components/_header_info.html',{
@@ -26,6 +26,7 @@
             })
 			<div class="content">
 				@@include('components/_comments_form.html',{})
+				@@include('components/_comments_list.html',{})
 			</div>
 		</main>
 
@@ -35,8 +36,8 @@
             "page": "comments"
         })
 	</div>
-	<script defer type="module" src="js/script.min.js"></script>
-	<script defer type="module" src="js/pages/index.min.js"></script>
+	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
+	<script defer type="module" src="@@pagesPath/js/pages/comments/comments.min.js"></script>
 </body>
 
 </html>

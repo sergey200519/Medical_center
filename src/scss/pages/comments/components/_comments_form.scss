@@ -1,11 +1,28 @@
 .comments-form {
+    margin-bottom: var(--section_gap);
     &_form {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        &_name {
+        input,
+        textarea {
+            border: 1px rgba($color: $gray, $alpha: .3) solid;
             padding: 15px 30px;
-            border: 1px rgba($color: var(--gray), $alpha: 1.0) solid;
+        }
+        &_inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+            textarea {
+                resize: none;
+                min-width: 600px;
+                height: 200px;
+                @media (max-width: 1024px) {
+                    width: 100%;
+                    min-width: 100px;
+                }
+            }
         }
     }
 }

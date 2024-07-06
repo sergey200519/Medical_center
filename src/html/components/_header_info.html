@@ -1,16 +1,14 @@
 <header class="headerinfo">
     <div class="container">
-        <a class="headerinfo_address">Г. Балашиха, Микрорайон 1 Мая, д. 9</a>
+        <a class="headerinfo_address">ул. Трифоновская, 55</a>
         <div class="headerinfo_social">
             @@if (page === "index") {
-            <a href="#"><img src="img/telegram.svg" alt=""></a>
-            <a href="#"><img src="img/whatsapp.svg" alt=""></a>
-            <a href="#"><img src="img/facebook.svg" alt=""></a>
+                <a href="#"><img src="img/telegram.svg" alt=""></a>
+                <a href="#"><img src="img/whatsapp.svg" alt=""></a>
             }
             @@if (page !== "index") {
                 <a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
                 <a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
-                <a href="#"><img src="@@pagesPath/img/facebook.svg" alt=""></a>
             }
         </div>
         <div class="headerinfo_phones">
