@@ -50,7 +50,7 @@
   background: rgba($color: $darkblue, $alpha: 0.8);
 }
 h1 {
-  @include font(40px, $fw: 700);
+  @include font(30px, $fw: 700);
   @media (max-width: 568px) {
     font-size: 34px;
   }

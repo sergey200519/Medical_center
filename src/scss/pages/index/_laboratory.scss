@@ -2,6 +2,7 @@
     h2,
     p, a {
         text-align: right;
+        justify-content: flex-end;
     }
     &_services {
         @extend .stomatology-laboratory_services;
