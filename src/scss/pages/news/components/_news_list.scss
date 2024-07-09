@@ -1,0 +1,80 @@
+.news-list {
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 50px;
+        @media (max-width: 568px) {
+            grid-template-columns: 1fr;
+        }
+        &_item {
+            padding: 15px;
+            background: var(--lightgray);
+            border-radius: var(--border-radius);
+            time {
+                display: block;
+                margin-bottom: 10px;
+                @include font(var(--small-fz));
+            }
+            h3 {
+                margin: 0;
+            }
+        }
+        &_item:hover {
+            background: var(--darkblue);
+            time {
+                color: var(--white);
+            }
+        }
+    }
+    &_pagination {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        flex-wrap: wrap;
+        width: fit-content;
+        margin: 0 auto;
+        @media (max-width: 568px) {
+            gap: 10px;
+        }
+        img {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+        &_left {
+            transform: rotate(180deg);
+        }
+        &_nums {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            @media (max-width: 568px) {
+                gap: 5px;
+            }
+            // div {
+            //     display: block;
+            //     width: 40px;
+            //     height: 40px;
+            //     text-align: center;
+            //     padding: 15px;
+            //     border-radius: 50%;
+            //     background: var(--darkpink);
+            //     color: white;
+            //     line-height: 0;
+            // }
+            a {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: var(--darkpink);
+                span {
+                    margin: auto;
+                    @include font(var(--normal-fz), $fw: 400);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}
