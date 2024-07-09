@@ -18,16 +18,14 @@
         <div class="mobile_body_navigation">
             <nav class="mobile_body_navigation_nav">
                 <ul>
-                    @@include('_headerMenuItems.html',{
+                    @@include('_header_menu_items.html',{
                         "page": "@@page"
                       })
                 </ul>
             </nav>
         </div>
         <div class="mobile_body_phones">
-            <p><span>(495)</span> 926-95-50</p>
-            <p><span>(496)</span> 539-90-50</p>
-            <p><span>(985)</span> 110-05-50</p>
+            @@include('_phones.html', {})
         </div>
     </div>
 </div>

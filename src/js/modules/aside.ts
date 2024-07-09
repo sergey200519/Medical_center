@@ -11,7 +11,6 @@ class AsideMenu {
         this.oldMenuItems;
     }
     render(e: Event): void {
-        e.preventDefault();
         const element: HTMLElement = e.target as HTMLElement;
         const menuItem: HTMLElement = element.closest("li");
         const submenu: HTMLElement = menuItem.querySelector("menu");
@@ -19,26 +18,42 @@ class AsideMenu {
         if (this.oldMenuItems == menuItem) {
             return;
         }
-
-        submenu.classList.remove("none");
-        menuItem.classList.add("active");
-        const menuItemHeight: number = menuItem.getBoundingClientRect().height;
-        submenu.style.height = `${menuItemHeight * submenuItems.length}px`;
-        let newHeight: number = 0;
-        submenuItems.forEach((item: HTMLElement) => {
-            newHeight += item.getBoundingClientRect().height;
-        })
-        if (newHeight > (menuItemHeight * submenuItems.length)) {
-            submenu.style.height = `${newHeight}px`;
+        if (this.oldMenuItems !== undefined) {
+            this.hide();   
         }
-        this.oldMenuItems = menuItem;
+
+        setTimeout(() => {
+            submenu.classList.remove("none");
+            menuItem.classList.add("active");
+            const menuItemHeight: number = menuItem.getBoundingClientRect().height;
+            submenu.style.height = `${menuItemHeight * submenuItems.length}px`;
+            let newHeight: number = 0;
+            console.log(submenuItems);
+            submenuItems.forEach((item: HTMLElement) => {
+                newHeight += item.getBoundingClientRect().height;
+            })
+            if (newHeight > (menuItemHeight * submenuItems.length)) {
+                submenu.style.height = `${newHeight}px`;
+            }
+            this.oldMenuItems = menuItem;
+            newHeight = 0;
+        }, this.oldMenuItems === undefined ? 0 : 1000);
+        // setTimeout(() => {
+        //     submenu.style.height = "fit-content";
+        // }, 1200);
     }
+
 
     hide() {
         [...this.menuItems].forEach((element: HTMLElement): void => {
             const submenu: HTMLElement = element.querySelector(".submenu");
-            element.classList.remove("active");
-            submenu.classList.add("none");
+            if (submenu) {
+                submenu.style.height = "0px";
+                setTimeout(() => {
+                    element.classList.remove("active");
+                    submenu.classList.add("none");
+                }, 800);
+            }
         });
     }
 }

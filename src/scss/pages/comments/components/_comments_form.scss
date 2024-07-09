@@ -16,12 +16,8 @@
             margin-bottom: 15px;
             textarea {
                 resize: none;
-                min-width: 600px;
                 height: 200px;
-                @media (max-width: 1024px) {
-                    width: 100%;
-                    min-width: 100px;
-                }
+                width: 100%;
             }
         }
     }

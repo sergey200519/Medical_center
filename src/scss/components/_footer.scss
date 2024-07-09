@@ -63,8 +63,9 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
-                p {
-                    @extend .phones_p
+                @extend .phones;
+                a {
+                    color: var(--darkblue);
                 }
             }
         }

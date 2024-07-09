@@ -1,0 +1,10 @@
+.contactsmap {
+    margin-bottom: 0;
+    iframe {
+        width: 100%;
+        height: 600px;
+        @media (max-width: 1920px) {
+            height: dynamic_value_1920-320(200, 600, "px");
+        }
+    }
+}

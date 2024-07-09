@@ -43,9 +43,9 @@
             align-self: center;
         }
         p {
-            @extend .phones_p;
-            color: var(--white);
         }
+        @extend .phones;
+        color: var(--white);
     }
     &_appointment {
         @extend .appointment_to_doctor;

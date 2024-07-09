@@ -2,45 +2,46 @@
 <html lang="ru">
 @@include('@@pagesPath/html/components/_head.html',
 {
-	"title": "Отзывы", 
-	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/comments/comments.min.css\"/>",
+	"title": "Контакты", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/contacts/contacts.min.css\"/>",
     "page": "pages"
 })
 
 <body>
 	@@include('@@pagesPath/html/components/_mobile_menu.html',{
-        "page": "comments"
+        "page": "contacts"
     })
 	<div class="wrapper">
 		@@include('@@pagesPath/html/components/_header_info.html',{
-            "page": "comments"
+            "page": "contacts"
         })
 
 		@@include('@@pagesPath/html/components/_header.html',{
-            "page": "comments"
+            "page": "contacts"
         })
 
+		<!-- <main class="wrap container"> -->
 		<main class="main">
 			<div class="container">
 				<div class="wrap">
 					@@include('@@pagesPath/html/components/_aside.html',{
-						"page": "comments"
+						"page": "contacts"
 					})
-					<div class="content">
-						@@include('components/_comments_form.html',{})
-						@@include('components/_comments_list.html',{})
+					<div class="content two_sections_contacts">
+						@@include('components/_contacts_info.html' {})
+						@@include('components/_contacts_map.html' {})
 					</div>
 				</div>
 			</div>
+			
 		</main>
 
 
 
 		@@include('@@pagesPath/html/components/_footer.html',{
-            "page": "comments"
+            "page": "contacts"
         })
 	</div>
 	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
-	<script defer type="module" src="@@pagesPath/js/pages/comments/comments.min.js"></script>
 </body>
 </html>

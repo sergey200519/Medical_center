@@ -1,0 +1,50 @@
+.contacts {
+    margin-bottom: 0;
+    &_info {
+        &_body {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            th {
+                vertical-align: top;
+                @include font(var(--normal-fz), $fw: 600);
+            }
+            tr {
+                display: flex;
+                gap: 15px;
+            }
+            &_phones {
+                td {
+                    @extend .phones;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    a {
+                        color: var(--darkblue);
+                        @include font(var(--normal-fz));
+                        text-decoration: underline;
+                        span {
+                            @include font(var(--normal-fz));
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &_email {
+                td {
+                    a {
+                        color: var(--darkblue);
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &_schedule {
+                td {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+}

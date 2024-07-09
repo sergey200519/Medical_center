@@ -3,12 +3,19 @@
     <li><a href="#"><span>Партнёры</span></a></li>
     <li><a href="#"><span>Новости</span></a></li>
     <li><a href="html/pages/comments/comments.html"><span>Отзывы</span></a></li>
-    <li><a href="#"><span>Контакты</span></a></li>
+    <li><a href="html/pages/contacts/contacts.html"><span>Контакты</span></a></li>
 }
 @@if (page === "comments") {
     <li><a href="@@pagesPath/index.html"><span>Главная</span></a></li>
     <li><a href="#"><span>Партнёры</span></a></li>
     <li><a href="#"><span>Новости</span></a></li>
     <li class="active"><a href="#"><span>Отзывы</span></a></li>
-    <li><a href="#"><span>Контакты</span></a></li>
+    <li><a href="../contacts/contacts.html"><span>Контакты</span></a></li>
+}
+@@if (page === "contacts") {
+    <li><a href="@@pagesPath/index.html"><span>Главная</span></a></li>
+    <li><a href="#"><span>Партнёры</span></a></li>
+    <li><a href="#"><span>Новости</span></a></li>
+    <li><a href="../comments/comments.html"><span>Отзывы</span></a></li>
+    <li class="active"><a href="#"><span>Контакты</span></a></li>
 }

@@ -5,11 +5,14 @@
         gap: 15px;
         &_item {
             min-width: 200px;
+            border-radius: var(--border-radius);
             > div {
                 display: flex;
                 align-items: center;
                 background: var(--darkblue);
                 padding-right: 15px;
+                border-radius: var(--border-radius);
+                
                 cursor: pointer;
                 img {
                     width: 30px;
@@ -17,7 +20,8 @@
                     border-radius: 50%;
                 }
             }
-            a {
+            a,
+            span {
                 display: block;
                 padding: 15px 30px 15px 20px;
                 width: 100%;
@@ -47,12 +51,15 @@
         &_item.active,
         &_item:hover {
             > div {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
                 img {
                     transform: rotate(90deg);
                 }
             }
             .submenu {
-                height: var(--subtitle-height);
+                border-bottom-left-radius: var(--border-radius);
+                border-bottom-right-radius: var(--border-radius);
             }
         }
     }

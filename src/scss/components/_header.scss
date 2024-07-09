@@ -66,6 +66,9 @@
             li.active,
             li:hover {
                 background: var(--darkblue);
+                // border-bottom-right-radius: var(--border-radius);
+                // border-bottom-left-radius: var(--border-radius);
+                border-radius: var(--border-radius);
                 a {
                     color: var(--white);
                 }

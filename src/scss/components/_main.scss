@@ -27,12 +27,16 @@
 .wrap {
   display: flex;
   gap: 60px;
-  flex: 1 1 auto;
-  padding: 30px 25px 30px 25px;
-  @media (max-width: 568px) {
-    flex-direction: column;
-    padding: 30px var(--container-padding);
+  padding: 30px 0;
+  @media (max-width: 1024px) {
+    gap: 20px;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+main.main {
+  flex: 1 1 auto;
 }
 .content {
   flex: 1 1 auto;
@@ -50,16 +54,21 @@
   background: rgba($color: $darkblue, $alpha: 0.8);
 }
 h1 {
-  @include font(30px, $fw: 700);
+  @include font(30px, $fw: 800);
   @media (max-width: 568px) {
     font-size: 34px;
   }
 }
 .h2,
 .h2 h2 {
-  @include font(28px, $fw: 800);
+  @include font(28px, $fw: 700);
   color: var(--darkblue);
   margin-bottom: 15px;
+}
+h3 {
+  @include font(var(--h3-fz), 600);
+  color: var(--darkpink);
+  margin: 15px 0 20px 0;
 }
 section {
   margin-bottom: var(--section_gap);
