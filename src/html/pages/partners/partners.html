@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('@@pagesPath/html/components/_head.html',
+{
+	"title": "Новости", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/news/news.min.css\"/>",
+    "page": "pages"
+})
+
+<body>
+	@@include('@@pagesPath/html/components/_mobile_menu.html',{
+        "page": "partners"
+    })
+	<div class="wrapper">
+		@@include('@@pagesPath/html/components/_header_info.html',{
+            "page": "partners"
+        })
+
+		@@include('@@pagesPath/html/components/_header.html',{
+            "page": "partners"
+        })
+        
+		<main class="main">
+			<div class="container">
+				<div class="wrap">
+					@@include('@@pagesPath/html/components/_aside.html',{
+						"page": "partners"
+					})
+					<div class="content">
+                        partners
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@pagesPath/html/components/_footer.html',{
+            "page": "partners"
+        })
+	</div>
+	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
+</body>
+</html>

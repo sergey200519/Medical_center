@@ -1,0 +1,17 @@
+<div class="appointment_modal none">
+    <div class="appointment_modal_body">
+        @@if (page === "index") {
+            <img src="img/cross.svg" loading="lazy" alt="" class="appointment_modal_body_clouse">
+        }
+        @@if (page !== "index") {
+            <img src="@@pagesPath/img/cross.svg" loading="lazy" alt="" class="appointment_modal_body_clouse">
+        }
+        <h2 class="h2">Запись на прием</h2>
+        <form action="" class="appointment_modal_body_form appointment-form">
+            <input type="text" placeholder="Введите имя">
+            <input type="text" placeholder="Введите имя специалиста">
+            <input type="text" placeholder="Введите телефон">
+            <input class="btn" type="submit" value="Записаться на прием">
+        </form>
+    </div>
+</div>

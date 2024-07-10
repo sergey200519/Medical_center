@@ -1,21 +1,31 @@
 <header class="headerinfo">
     <div class="container">
-        <a class="headerinfo_address">ул. Трифоновская, 55</a>
-        <div class="headerinfo_social">
+        <div class="headerinfo_top">
+            <p>Информация</p>
+        </div>
+        <div class="headerinfo_bottom">
             @@if (page === "index") {
-                <a href="#"><img src="img/telegram.svg" alt=""></a>
-                <a href="#"><img src="img/whatsapp.svg" alt=""></a>
+                <a href="html/pages/contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
             }
             @@if (page !== "index") {
-                <a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
-                <a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
+                <a href="../contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
+            }
+            <div class="headerinfo_bottom_social">
+                @@if (page === "index") {
+                    <a href="#"><img src="img/telegram.svg" alt=""></a>
+                    <a href="#"><img src="img/whatsapp.svg" alt=""></a>
+                }
+                @@if (page !== "index") {
+                    <a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
+                    <a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
+                }
+            </div>
+            <div class="headerinfo_bottom_phones">
+                @@include('_phones.html', {})
+            </div>
+            @@if (page === "index") {
+                <a href="" class="headerinfo_bottom_appointment appointment_btn">Запись к врачу</a>
             }
         </div>
-        <div class="headerinfo_phones">
-            @@include('_phones.html', {})
-        </div>
-        @@if (page === "index") {
-            <a href="" class="headerinfo_appointment">Запись к врачу</a>
-        }
     </div>
 </header>

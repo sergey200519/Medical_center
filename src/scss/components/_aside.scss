@@ -12,6 +12,7 @@
                 background: var(--darkblue);
                 padding-right: 15px;
                 border-radius: var(--border-radius);
+                overflow: hidden;
                 
                 cursor: pointer;
                 img {
@@ -50,12 +51,15 @@
         }
         &_item.active,
         &_item:hover {
-            > div {
+            > div:has(span) {
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
                 img {
                     transform: rotate(90deg);
                 }
+            }
+            > div:has(a) {
+                border-radius: var(--border-radius);
             }
             .submenu {
                 border-bottom-left-radius: var(--border-radius);

@@ -5,10 +5,17 @@
 				© 2019 - 2024 Стоматология «Дента Лайн»
 			</p>
 			<address class="sitefooter_left_address">
-				<a href="#">ул. Трифоновская, 55</a>
+				@@if (page === "index") {
+					<a href="html/pages/contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
+				}
+				@@if (page !== "index") {
+					<a href="../contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
+				}
 			</address>
+		</div>
+		<div>
 			<span>Мы принимаем к оплате:</span>
-			<div class="sitefooter_left_cards">
+			<div class="sitefooter_cards">
 				@@if (page === "index") {
                     <img src="img/visa_card.png" alt="карта виза">
 					<img src="img/mastercard.png" alt="мастер карта">
@@ -21,6 +28,16 @@
                 }
 			</div>
 		</div>
+		<div class="sitefooter_social">
+			@@if (page === "index") {
+				<a href="#"><img src="img/telegram.svg" alt=""></a>
+				<a href="#"><img src="img/whatsapp.svg" alt=""></a>
+			}
+			@@if (page !== "index") {
+				<a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
+				<a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
+			}
+		</div>
 		<div class="sitefooter_right">
 			<div class="sitefooter_right_phones">
 				@@if (page === "index") {
@@ -32,16 +49,6 @@
 				<div class="">
 					@@include('_phones.html', {})
 				</div>
-			</div>
-			<div class="sitefooter_right_social">
-				@@if (page === "index") {
-                    <a href="#"><img src="img/telegram.svg" alt=""></a>
-					<a href="#"><img src="img/whatsapp.svg" alt=""></a>
-                }
-                @@if (page !== "index") {
-					<a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
-					<a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
-                }
 			</div>
 		</div>
 	</div>

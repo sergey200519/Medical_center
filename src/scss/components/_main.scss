@@ -43,7 +43,7 @@ main.main {
   min-width: 250px;
 }
 .none {
-  display: none;
+  display: none !important;
 }
 .btn {
   display: block;
@@ -61,9 +61,12 @@ h1 {
 }
 .h2,
 .h2 h2 {
-  @include font(28px, $fw: 700);
   color: var(--darkblue);
   margin-bottom: 15px;
+  @include font(30px, $fw: 800, $ff: #{"Ubuntu", sans-serif}, $fs: italic);
+  @media (max-width: 568px) {
+    font-size: 28px;
+  }
 }
 h3 {
   @include font(var(--h3-fz), 600);

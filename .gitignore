@@ -3,4 +3,5 @@ version.json
 node_modules/
 dist/
 .publish/
+todo.txt
 *.xcf
