@@ -32,8 +32,14 @@
                 }
             </div>
             <menu class="asidemenu_menu_item_submenu submenu">
-                <li><a href="">Прейскурант - цена</a></li>
-                <li><a href="">Прейскурант - цена</a></li>
+                @@if (page === "index") {
+                    <li><a href="html/pages/pricelist_dentistry/pricelist_dentistry.html">Прейскурант - цена</a></li>
+                    <li><a href="">Прейскурант - цена</a></li>
+                }
+                @@if (page !== "index") {
+                    <li><a href="../pricelist_dentistry/pricelist_dentistry.html">Прейскурант - цена</a></li>
+                    <li><a href="">Прейскурант - цена</a></li>
+                }
             </menu>
         </li>
         <li class="asidemenu_menu_item">

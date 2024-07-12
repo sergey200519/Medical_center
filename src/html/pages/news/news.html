@@ -9,8 +9,11 @@
 
 <body>
 	@@include('@@pagesPath/html/components/_mobile_menu.html',{
-        "page": "news"
+        "page": "pricelist_dentistry"
     })
+	@@include('@@pagesPath/html/components/_appointment_modal.html', {
+		"page": "pricelist_dentistry"
+	})
 	<div class="wrapper">
 		@@include('@@pagesPath/html/components/_header_info.html',{
             "page": "news"

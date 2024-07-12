@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('@@pagesPath/html/components/_head.html', {
-	"title": "Стоматология - услуги", 
-	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/dentistry/dentistry.min.css\"/>",
+	"title": "Стоматология - Прейскурант", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/pricelist_dentistry/pricelist_dentistry.min.css\"/>",
     "page": "pages"
 })
 
@@ -15,7 +15,7 @@
 	})
 	<div class="wrapper">
 		@@include('@@pagesPath/html/components/_header_info.html',{
-            "page": "dentistry"
+            "page": "pricelist_dentistry"
         })
 
 		@@include('@@pagesPath/html/components/_header.html',{
@@ -26,10 +26,10 @@
 			<div class="container">
 				<div class="wrap">
 					@@include('@@pagesPath/html/components/_aside.html',{
-						"page": "dentistry"
+						"page": "pricelist_dentistry"
 					})
 					<div class="content">
-                        @@include('components/_services.html')
+                        @@include('components/_pricelist_table.html', {})
 					</div>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 		</main>
 
 		@@include('@@pagesPath/html/components/_footer.html',{
-            "page": "dentistry"
+            "page": "pricelist_dentistry"
         })
 	</div>
 	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>

@@ -1,0 +1,25 @@
+.pricelist-table {
+    border-collapse: collapse;
+    th {
+        padding: 5px 10px;
+    }
+    thead {
+        tr {
+            background: rgba($color: $darkblue, $alpha: 0.8);
+        }
+    }
+    tbody {
+        > tr:nth-child(1) {
+            th {
+                background: rgba($color: $darkblue, $alpha: 0.3);
+                @include font(var(--big-fz), $fw: 600, $pos: center);
+                padding: 15px;
+            }
+        }
+        tr {
+            td:nth-child(1) {
+                text-align: center;
+            }
+        }
+    }
+}
