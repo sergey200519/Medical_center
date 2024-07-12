@@ -44,7 +44,12 @@
         </li>
         <li class="asidemenu_menu_item">
             <div>
-                <a class="asidemenu_menu_item_link">Специалисты</a>
+                @@if (page === "index") {
+                    <a href="html/pages/specialists/specialists.html" class="asidemenu_menu_item_link">Специалисты</a>
+                }
+                @@if (page !== "index") {
+                    <a href="../specialists/specialists.html" class="asidemenu_menu_item_link">Специалисты</a>
+                }
             </div>
         </li>
         <li class="asidemenu_menu_item">

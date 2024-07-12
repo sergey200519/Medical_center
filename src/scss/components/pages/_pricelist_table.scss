@@ -1,5 +1,8 @@
 .pricelist-table {
+    display: block;
     border-collapse: collapse;
+    overflow-x: scroll;
+    min-width: calc(320px - var(--container-padding));
     th {
         padding: 5px 10px;
     }
