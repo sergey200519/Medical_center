@@ -56,21 +56,21 @@
                         max-width: 80%;
                     }
                     h2 {
-                        @include font(46px, $fw: 800);
+                        @include font(60px, $fw: 800);
                         color: var(--white);
                         margin-bottom: 15px;
                         @media (max-width: 1920px) {
-                            font-size: dynamic_value_1920-320(22, 46, "px");
+                            font-size: dynamic_value_1920-320(22, 60, "px");
                         }
                         @media (max-width: 568px) {
                             margin-bottom: 15px;
                         }
                     }
                     p {
-                        @include font(22px, $fw: 600);
+                        @include font(26px, $fw: 600);
                         color: var(--black);
                         @media (max-width: 1920px) {
-                            font-size: dynamic_value_1920-320(18, 22, "px");
+                            font-size: dynamic_value_1920-320(18, 26, "px");
                         }
                     }
                 }
