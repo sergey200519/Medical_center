@@ -12,7 +12,7 @@ newBannerSwiper(document.querySelector(".swiper-section_swiper"), {
         "class": "active"
     },
     "autoPlay": true,
-    "autoPlayTime": 10000
+    "autoPlayTime": 100000000
 });
 
 

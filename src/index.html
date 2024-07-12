@@ -18,11 +18,14 @@
 		@@include('html/components/_header_info.html',{
 			"page": "index"
 		})
-		@@include('html/pages/index/_banner.html',{})
-
+		
 		@@include('html/components/_header.html',{
 			"page": "index"
 		})
+		
+		@@include('html/pages/index/_banner.html',{})
+
+		
 
 		<main class="main">
 			<div class="container">
@@ -31,7 +34,6 @@
 						"page": "index"
 					})
 					<div class="content">
-						@@include('html/pages/index/_about.html',{})
 						<div class="two_sections_index">
 							<div class="">
 								@@include('html/pages/index/_stomatology.html',{})
@@ -40,6 +42,7 @@
 								@@include('html/pages/index/_laboratory.html',{})
 							</div>
 						</div>
+						@@include('html/pages/index/_about.html',{})
 					</div>
 				</div>
 			</div>

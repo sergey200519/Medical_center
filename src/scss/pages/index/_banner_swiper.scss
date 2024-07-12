@@ -3,13 +3,12 @@
     height: fit-content;
     background: linear-gradient($darkblue, var(--page-background));
     margin-bottom: 0;
+    background: var(--darkblue);
+    background: linear-gradient(var(--page-background), var(--darkblue));
     .container {
-        padding: var(--container-padding) calc(var(--container-padding) + 100px);
-        // @media (max-width: 1920px) {
-        //     padding: 0;
-        // }
-        @media (max-width: 768px) {
-            padding: var(--container-padding);
+        padding: var(--container-padding);
+        @media (max-width: 1920px) {
+            padding: 0;
         }
     }
     .swiper {
@@ -28,51 +27,50 @@
                 left: 0;
                 width: 100%;
                 opacity: 0;
-                height: 450px;
+                height: 800px;
                 transition: 3s;
                 overflow: hidden;
                 
                 @media (max-width: 1920px) {
-                    height: dynamic_value_1920-320(150, 450, "px");
+                    height: dynamic_value_1920-320(200, 800, "px");
                 }
                 img {
                     width: 100%;
-                    height: 450px;
+                    height: 800px;
                     object-fit: cover;
                     border-radius: var(--border-radius);
                     @media (max-width: 1920px) {
-                        height: dynamic_value_1920-320(150, 450, "px");
+                        height: dynamic_value_1920-320(200, 800, "px");
+                        border-radius: 0;
                     }
                 }
                 &-info {
                     position: absolute;
                     top: 30px;
-                    right: 40px;
+                    left: 40px;
                     max-width: 60%;
-                    @media (max-width: 768px) {
-                        right: 5px;
-                        max-width: 100%;
-                        top: 5px;
+                    @media (max-width: 568px) {
+                        left: 20px;
                     }
                     @media (max-width: 375px) {
                         max-width: 80%;
                     }
                     h2 {
-                        @include font(46px, $fw: 800, $pos: right);
+                        @include font(46px, $fw: 800);
                         color: var(--white);
-                        margin-bottom: 25px;
+                        margin-bottom: 15px;
                         @media (max-width: 1920px) {
-                            font-size: dynamic_value_1920-320(16, 46, "px");
+                            font-size: dynamic_value_1920-320(22, 46, "px");
+                        }
+                        @media (max-width: 568px) {
+                            margin-bottom: 15px;
                         }
                     }
                     p {
-                        @include font(22px, $fw: 600, $pos: right);
+                        @include font(22px, $fw: 600);
                         color: var(--black);
-                        @media (max-width: 1024px) {
-                            font-size: 20px;
-                        }
-                        @media (max-width: 568px) {
-                            font-size: 16px;
+                        @media (max-width: 1920px) {
+                            font-size: dynamic_value_1920-320(18, 22, "px");
                         }
                     }
                 }

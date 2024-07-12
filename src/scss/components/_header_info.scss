@@ -1,14 +1,14 @@
 .headerinfo {
-    background: var(--darkblue);
+    background: var(--page-background);
     .container {
-        padding: var(--container-padding);
+        padding: 5px var(--container-padding);
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
     &_top {
         p {
-            color: var(--white);
+            color: var(--darkblue);
         }
     }
     &_bottom {
@@ -20,7 +20,7 @@
             flex-direction: column;
         }
         &_address {
-            color: var(--white);
+            color: var(--darkblue);
             @media (max-width: 1024px) {
                 align-self: flex-start;
             }
@@ -42,8 +42,7 @@
         }
         &_phones {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            gap: 15px;
             @media (max-width: 1024px) {
                 align-self: flex-end;
             }
@@ -51,7 +50,9 @@
                 align-self: center;
             }
             @extend .phones;
-            color: var(--white);
+            a {
+                color: var(--darkblue);
+            }
         }
         &_appointment {
             @extend .appointment_to_doctor;

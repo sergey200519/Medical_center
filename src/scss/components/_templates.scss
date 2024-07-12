@@ -4,18 +4,20 @@
         @include font(var(--big-fz), 700);
         margin: 0;
         span {
-            color: var(--darkpink);
+            color: var(--red);
             @include font(var(--big-fz), 700);
         }
     }
 }
 
 .logo_topheader {
+    display: flex;
+    flex-direction: column;
     img {
-        max-width: 100px;
+        max-width: 200px;
     }
-    h1 {
-        color: var(--darkblue);
+    img:nth-child(1) {
+        max-width: 100px;
     }
 }
 
@@ -51,5 +53,8 @@
     border-radius: var(--border-radius);
     &:hover {
         border-radius: calc(var(--border-radius) + 10px);
+    }
+    @media (max-width: 1280px) {
+        padding: 14px 26px;
     }
 }

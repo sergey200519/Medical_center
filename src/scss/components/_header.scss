@@ -1,6 +1,5 @@
 .topheader {
     background: var(--page-background);
-    background: linear-gradient(var(--page-background), rgba(255, 255, 255, 0));
     .container {
         display: flex;
         flex-direction: row;
@@ -15,7 +14,7 @@
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        @media (max-width: 1280px) {
+        @media (max-width: 1024px) {
             display: flex;
         }
         span {
@@ -37,13 +36,19 @@
         @extend .logo_topheader;
         margin: 10px 0;
         @media (max-width: 1280px) {
+            max-width: 120px;
+            img {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1024px) {
             display: none;
         }
     }
     .headernav {
         display: block;
         align-self: center;
-        @media (max-width: 1280px) {
+        @media (max-width: 1024px) {
             display: none;
         }
         &_ul {
@@ -58,6 +63,9 @@
                     @include font(var(--normal-fz));
                     span {
                         margin: auto;
+                    }
+                    @media (max-width: 1280px) {
+                        padding: 14px 20px;
                     }
                 }
             }

@@ -4,6 +4,7 @@
         &_header {
             display: flex;
             gap: 15px;
+            align-items: center;
             margin-bottom: 10px;
             @media (max-width: 768px) {
                 flex-direction: column;
@@ -11,6 +12,7 @@
             }
             h3 {
                 @include font(var(--big-fz), 600);
+                margin: 0;
             }
             &_stars {
                 svg {
