@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('@@pagesPath/html/components/_head.html',
-{
-	"title": "Новости", 
-	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/news/news.min.css\"/>",
-    "page": "pages"
+@@include('@@pagesPath/html/components/_head.html', {
+"title": "Партнёры",
+"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/partners/partners.min.css\" />",
+"page": "pages"
 })
 
 <body>
 	@@include('@@pagesPath/html/components/_mobile_menu.html',{
-        "page": "partners"
-    })
+	"page": "partners"
+	})
 	<div class="wrapper">
 		@@include('@@pagesPath/html/components/_header_info.html',{
-            "page": "partners"
-        })
+		"page": "partners"
+		})
 
 		@@include('@@pagesPath/html/components/_header.html',{
-            "page": "partners"
-        })
-        
+		"page": "partners"
+		})
+
 		<main class="main">
 			<div class="container">
 				<div class="wrap">
 					@@include('@@pagesPath/html/components/_aside.html',{
-						"page": "partners"
+					"page": "partners"
 					})
 					<div class="content">
-                        partners
+						<p>В основе работе нашей клиники лежит в стремлении предоставить и оказать нашим пациентам на высоком профессиональном уровне.</p>
+						<p>Одно из направлений нашей клиники партнерское сотрудничество с фирмой СИТИЛАБ – МЕЖДУНАРОДНАЯ СЕТЬ КЛИНИКО-ДИАГНОСТИЧЕСКИХ ИСЛЕДОВАНИЙ.</p>
+						<p>Сеть начала свою работу в 2005 году. Сегодня в каждом филиале сети проводят более 1000 наименований различных исследований. Все лаборатории «Ситилаб» оснащены
+							стандартизированным парком анализаторов последнего поколения, выпущенных мировыми
+							лидерами в лабораторном приборостроении. В центрах обследования пациентов применяются
+							только одноразовые вакуумные системы Vacutainer (производства США).</p>
+						<p>Это уникальная большая команда профессионалов помогает пациентом нашей клиники заботливо
+							относиться к себе и своим близким, повышая качество и профессионализм своей жизни точностью
+							и широким спектром анализов.</p>
 					</div>
 				</div>
 			</div>
-			
+
 		</main>
 
 		@@include('@@pagesPath/html/components/_footer.html',{
-            "page": "partners"
-        })
+		"page": "partners"
+		})
 	</div>
 	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
 </body>
+
 </html>

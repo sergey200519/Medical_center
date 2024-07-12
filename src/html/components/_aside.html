@@ -11,8 +11,14 @@
                 }
             </div>
             <menu class="asidemenu_menu_item_submenu submenu">
-                <li><a href="">Стоматология</a></li>
-                <li><a href="">Лаболатория</a></li>
+                @@if (page === "index") {
+                    <li><a href="html/pages/dentistry/dentistry.html">Стоматология</a></li>
+                    <li><a href="">Лаболатория</a></li>
+                }
+                @@if (page !== "index") {
+                    <li><a href="../dentistry/dentistry.html">Стоматология</a></li>
+                    <li><a href="">Лаболатория</a></li>
+                }
             </menu>
         </li>
         <li class="asidemenu_menu_item">

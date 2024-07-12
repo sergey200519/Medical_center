@@ -1,5 +1,6 @@
 .headerinfo {
-    background: var(--page-background);
+    // background: var(--page-background);
+    background: var(--white);
     .container {
         padding: 5px var(--container-padding);
         display: flex;
@@ -28,15 +29,14 @@
                 align-self: center;
             }
         }
-        &_social {
+        &_schedule {
             display: flex;
+            flex-direction: column;
             gap: 5px;
-            a {
-                width: 32px;
-                height: 32px;
-                img {
-                    width: 100%;
-                    height: 100%;
+            p {
+                color: var(--darkblue);
+                span {
+                    color: var(--darkpink);
                 }
             }
         }
@@ -53,9 +53,6 @@
             a {
                 color: var(--darkblue);
             }
-        }
-        &_appointment {
-            @extend .appointment_to_doctor;
         }
     }
 }
