@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('@@pagesPath/html/components/_head.html', {
+	"title": "Стоматология - услуги", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/laboratory/laboratory.min.css\"/>",
+    "page": "pages"
+})
+
+<body>
+	@@include('@@pagesPath/html/components/_mobile_menu.html',{
+        "page": "laboratory"
+    })
+	@@include('@@pagesPath/html/components/_appointment_modal.html', {
+		"page": "laboratory"
+	})
+	<div class="wrapper">
+		@@include('@@pagesPath/html/components/_header_info.html',{
+            "page": "laboratory"
+        })
+
+		@@include('@@pagesPath/html/components/_header.html',{
+            "page": "pages"
+        })
+        
+		<main class="main">
+			<div class="container">
+				<div class="wrap">
+					@@include('@@pagesPath/html/components/_aside.html',{
+						"page": "laboratory"
+					})
+					<div class="content">
+                        @@include('components/_services.html')
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@pagesPath/html/components/_footer.html',{
+            "page": "laboratory"
+        })
+	</div>
+	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
+</body>
+</html>

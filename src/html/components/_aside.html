@@ -13,11 +13,11 @@
             <menu class="asidemenu_menu_item_submenu submenu">
                 @@if (page === "index") {
                     <li><a href="html/pages/dentistry/dentistry.html">Стоматология</a></li>
-                    <li><a href="">Лаболатория</a></li>
+                    <li><a href="html/pages/laboratory/laboratory.html">Лаболатория</a></li>
                 }
                 @@if (page !== "index") {
                     <li><a href="../dentistry/dentistry.html">Стоматология</a></li>
-                    <li><a href="">Лаболатория</a></li>
+                    <li><a href="../laboratory/laboratory.html">Лаболатория</a></li>
                 }
             </menu>
         </li>
@@ -33,12 +33,12 @@
             </div>
             <menu class="asidemenu_menu_item_submenu submenu">
                 @@if (page === "index") {
-                    <li><a href="html/pages/pricelist_dentistry/pricelist_dentistry.html">Прейскурант - цена</a></li>
-                    <li><a href="">Прейскурант - цена</a></li>
+                    <li><a href="html/pages/pricelist_dentistry/pricelist_dentistry.html">Прейскурант - Стоматология</a></li>
+                    <li><a href="html/pages/pricelist_laboratory/pricelist_laboratory.html">Прейскурант - Лаболатория</a></li>
                 }
                 @@if (page !== "index") {
-                    <li><a href="../pricelist_dentistry/pricelist_dentistry.html">Прейскурант - цена</a></li>
-                    <li><a href="">Прейскурант - цена</a></li>
+                    <li><a href="../pricelist_dentistry/pricelist_dentistry.html">Прейскурант - Стоматология</a></li>
+                    <li><a href="../pricelist_laboratory/pricelist_laboratory.html">Прейскурант - Лаболатория</a></li>
                 }
             </menu>
         </li>
@@ -54,12 +54,22 @@
         </li>
         <li class="asidemenu_menu_item">
             <div>
-                <a class="asidemenu_menu_item_link">Расписание</a>
+                @@if (page === "index") {
+                    <a href="html/pages/schedule/schedule.html" class="asidemenu_menu_item_link">Расписание</a>
+                }
+                @@if (page !== "index") {
+                    <a href="../schedule/schedule.html" class="asidemenu_menu_item_link">Расписание</a>
+                }
             </div>
         </li>
         <li class="asidemenu_menu_item">
             <div>
-                <a href="" class="asidemenu_menu_item_link">Информация</a>
+                @@if (page === "index") {
+                    <a href="html/pages/stocks/stocks.html" class="asidemenu_menu_item_link">Акции</a>
+                }
+                @@if (page !== "index") {
+                    <a href="../stocks/stocks.html" class="asidemenu_menu_item_link">Акции</a>
+                }
             </div>
         </li>
     </menu>
