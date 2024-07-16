@@ -1,0 +1,363 @@
+.phones a {
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.phones a span {
+  color: var(--red);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.logo_topheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo_topheader img {
+  max-width: 200px;
+}
+
+.logo_topheader img:nth-child(1) {
+  max-width: 100px;
+}
+
+.stomatology-laboratory_services,
+.laboratory-section_services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stomatology-laboratory_services li,
+.laboratory-section_services li {
+  width: 100%;
+}
+
+.stomatology-laboratory_services li a,
+.laboratory-section_services li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.stomatology-laboratory_services li a img,
+.laboratory-section_services li a img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stomatology-laboratory_services li a:hover,
+.laboratory-section_services li a:hover {
+  color: var(--white);
+  background: var(--darkblue);
+}
+
+.appointment_to_doctor {
+  padding: 15px 30px;
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  background: var(--darkpink);
+  border-radius: var(--border-radius);
+}
+
+.appointment_to_doctor:hover {
+  border-radius: calc(var(--border-radius) + 10px);
+}
+
+.two_sections_index {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.swiper-section {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00b4e4), to(var(--page-background)));
+  background: linear-gradient(#00b4e4, var(--page-background));
+  margin-bottom: 0;
+  background: var(--darkblue);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--page-background)), to(var(--darkblue)));
+  background: linear-gradient(var(--page-background), var(--darkblue));
+}
+
+.swiper-section .container {
+  padding: var(--container-padding);
+}
+
+.swiper-section .swiper {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+  border-radius: var(--border-radius);
+}
+
+.swiper-section .swiper_body {
+  position: relative;
+}
+
+.swiper-section .swiper_body_slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 800px;
+  -webkit-transition: 3s;
+  transition: 3s;
+  overflow: hidden;
+}
+
+.swiper-section .swiper_body_slide img {
+  width: 100%;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.swiper-section .swiper_body_slide-info {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  max-width: 60%;
+}
+
+.swiper-section .swiper_body_slide-info h2 {
+  font-family: var(--main_font-family);
+  font-size: 60px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+.swiper-section .swiper_body_slide-info p {
+  font-family: var(--main_font-family);
+  font-size: 26px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  color: var(--black);
+}
+
+.swiper-section .swiper_body_slide a {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 2;
+}
+
+.swiper-section .swiper_body_slide.active {
+  opacity: 1;
+}
+
+.swiper-section .swiper_navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.swiper-section .swiper_navigation_item {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--darkblue);
+  cursor: pointer;
+  -webkit-transition: 3s;
+  transition: 3s;
+}
+
+.swiper-section .swiper_navigation_item.active,
+.swiper-section .swiper_navigation_item:hover {
+  background: var(--darkpink);
+}
+
+.stomatology-section_advantages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.stomatology-section_advantages_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.stomatology-section_advantages_item img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stomatology-section_advantages_item p {
+  text-align: center;
+}
+
+.laboratory-section h2,
+.laboratory-section p,
+.laboratory-section a {
+  text-align: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 1920px) {
+  .swiper-section .container {
+    padding: var(--container-padding) 0 0 0;
+  }
+
+  .swiper-section .swiper_body_slide {
+    height: calc((100vw - 320px) / (1920 - 320) * (800 - 200) + 200px);
+  }
+
+  .swiper-section .swiper_body_slide img {
+    height: calc((100vw - 320px) / (1920 - 320) * (800 - 200) + 200px);
+    border-radius: 0;
+  }
+
+  .swiper-section .swiper_body_slide-info h2 {
+    font-size: calc((100vw - 320px) / (1920 - 320) * (60 - 22) + 22px);
+  }
+
+  .swiper-section .swiper_body_slide-info p {
+    font-size: calc((100vw - 320px) / (1920 - 320) * (26 - 18) + 18px);
+  }
+
+  .stomatology-section_advantages {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1280px) {
+  .appointment_to_doctor {
+    padding: 14px 26px;
+  }
+
+  .stomatology-section_advantages {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .two_sections_index {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .stomatology-section_advantages_item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 568px) {
+  .swiper-section .swiper_body_slide-info {
+    left: 20px;
+  }
+
+  .swiper-section .swiper_body_slide-info h2 {
+    margin-bottom: 15px;
+  }
+
+  .swiper-section .swiper_body_slide a {
+    right: 10px;
+    padding: 10px 15px;
+    font-family: var(--main_font-family);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .swiper-section .swiper_navigation {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swiper-section .swiper_body_slide-info {
+    max-width: 80%;
+  }
+
+  .swiper-section .swiper_navigation {
+    bottom: 10px;
+  }
+}

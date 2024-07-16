@@ -1,7 +1,0 @@
-version.json
-.DS_Store
-node_modules/
-dist/
-.publish/
-todo.txt
-*.xcf
