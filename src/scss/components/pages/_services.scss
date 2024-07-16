@@ -4,6 +4,8 @@
         flex-direction: column;
         gap: 15px;
         &_service {
+            display: flex;
+            flex-direction: column;
             .service {
                 display: grid;
                 grid-template-columns: 200px 1fr;
@@ -23,6 +25,10 @@
                         margin: 0;
                     }
                 }
+            }
+            .btn {
+                margin-left: auto;
+                margin-top: 0;
             }
         }
     }

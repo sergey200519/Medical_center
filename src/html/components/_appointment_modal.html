@@ -7,10 +7,16 @@
             <img src="@@pagesPath/img/cross.svg" loading="lazy" alt="" class="appointment_modal_body_clouse">
         }
         <h2 class="h2">Запись на прием</h2>
-        <form action="" class="appointment_modal_body_form appointment-form">
-            <input type="text" placeholder="Введите имя">
-            <input type="text" placeholder="Введите имя специалиста">
-            <input type="text" placeholder="Введите телефон">
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="bff21468-957d-4077-80e4-c3bb6cb77764">
+
+
+            <input type="text" name="name" placeholder="Введите имя" required>
+            <input type="text" name="doctor_name" placeholder="Введите имя специалиста" required>
+            <input type="text" name="phone" placeholder="Введите телефон" required>
+            <input type="text" name="email" placeholder="Введите Email" required>
             <input class="btn" type="submit" value="Записаться на прием">
         </form>
     </div>
