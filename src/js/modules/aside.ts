@@ -22,25 +22,22 @@ class AsideMenu {
             this.hide();   
         }
 
+
+        this.oldMenuItems = menuItem;
         setTimeout(() => {
             submenu.classList.remove("none");
             menuItem.classList.add("active");
             const menuItemHeight: number = menuItem.getBoundingClientRect().height;
             submenu.style.height = `${menuItemHeight * submenuItems.length}px`;
             let newHeight: number = 0;
-            console.log(submenuItems);
             submenuItems.forEach((item: HTMLElement) => {
                 newHeight += item.getBoundingClientRect().height;
             })
             if (newHeight > (menuItemHeight * submenuItems.length)) {
                 submenu.style.height = `${newHeight}px`;
             }
-            this.oldMenuItems = menuItem;
             newHeight = 0;
         }, this.oldMenuItems === undefined ? 0 : 1000);
-        // setTimeout(() => {
-        //     submenu.style.height = "fit-content";
-        // }, 1200);
     }
 
 
