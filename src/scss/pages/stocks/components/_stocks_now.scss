@@ -1,0 +1,17 @@
+.stocks_now {
+    ul {
+        margin-bottom: var(--base_mb);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        li {
+            list-style-type: initial;
+            padding-left: 15px;
+        }
+    }
+    p {
+        > a {
+            @extend .link;
+        }
+    }
+}

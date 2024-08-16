@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('@@pagesPath/html/components/_head.html', {
-	"title": "Стоматология - Прейскурант", 
-	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/pricelist_laboratory/pricelist_laboratory.min.css\"/>",
+	"title": "Стоматология - Акции", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/css/pages/stocks/stocks.min.css\"/>",
     "page": "pages"
 })
 
@@ -29,7 +29,8 @@
 						"page": "stocks"
 					})
 					<div class="content">
-                        Акции
+                        @@include('components/_stocks_now.html', {})
+						@@include('components/_stocks.html', {})
 					</div>
 				</div>
 			</div>

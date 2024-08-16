@@ -16,6 +16,8 @@
     --li_active_before_top: 0;
     // border
     --border-radius: 8px;
+    // gaps
+    --base_mb: calc(var(--section_gap) / 2);
 
     // section <--- index --->
     --team_swiper-padding: 25px;

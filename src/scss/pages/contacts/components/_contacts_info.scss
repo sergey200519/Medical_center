@@ -20,9 +20,8 @@
                     flex-direction: column;
                     gap: 5px;
                     a {
-                        color: var(--darkblue);
+                        @extend .link;
                         @include font(var(--normal-fz));
-                        text-decoration: underline;
                         span {
                             @include font(var(--normal-fz));
                             text-decoration: underline;
@@ -33,8 +32,7 @@
             &_email {
                 td {
                     a {
-                        color: var(--darkblue);
-                        text-decoration: underline;
+                        @extend .link;
                     }
                 }
             }

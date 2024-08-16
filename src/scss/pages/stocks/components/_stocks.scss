@@ -1,0 +1,16 @@
+.stocks {
+    &_info {
+        margin-top: var(--base_mb);
+        margin-bottom: var(--base_mb);
+    }
+    &_phones {
+        @extend .phones;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        a {
+            @extend .link;
+            text-decoration: none;
+        }
+    }
+}

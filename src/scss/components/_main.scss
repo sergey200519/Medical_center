@@ -63,7 +63,7 @@ h1 {
 .h2 h2 {
   color: var(--darkblue);
   margin-bottom: 30px;
-  @include font(30px, $fw: 800, $ff: #{"Ubuntu", sans-serif}, $fs: italic);
+  @include font(38px, $fw: 800, $ff: #{"Ubuntu", sans-serif}, $fs: italic);
   @media (max-width: 568px) {
     font-size: 28px;
   }
