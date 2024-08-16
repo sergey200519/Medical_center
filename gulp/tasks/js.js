@@ -37,7 +37,8 @@ export const js = () => {
     //   // noImplicitUseStrict: true
     // }))
     .pipe(tsProj())
-    .pipe(app.plugins.replace(".js", '.min.js'))
+    .pipe(app.plugins.replace(".js\"", ".min.js\""))
+    .pipe(app.plugins.replace(".js\'", ".min.js\'"))
     // .pipe(ts.createProject("tsconfig.json"), { noImplicitAny: true })
     // .pipe(removeUseStrict())
     .pipe(app.gulp.dest(app.path.build.js))
