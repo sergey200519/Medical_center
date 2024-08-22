@@ -1,10 +1,13 @@
+const REVIEWS_URL = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/reviews/";
+
+
 type Review = {
     id: number;
     author: string;
     text: string;
 }
 
-fetch("http://127.0.0.1:10000/reviews/", {
+fetch(REVIEWS_URL, {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -46,7 +49,7 @@ const btn: HTMLButtonElement = document.querySelector("body > div.wrapper > main
 
 btn.addEventListener("click", (e) => {
     e.preventDefault();
-    fetch('http://127.0.0.1:10000/reviews/', {
+    fetch(REVIEWS_URL, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -58,9 +61,30 @@ btn.addEventListener("click", (e) => {
         })
     })
         .then(response => {
+            console.log(response);
+            console.log(response.json());
             return response.json();
         })
         .then(data => {
             renderReviews(data);
+            fetch(REVIEWS_URL, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Ошибка запроса');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    renderReviews(data);
+                })
+                .catch(error => {
+                    console.log(error);
+                });            
         })
 })
