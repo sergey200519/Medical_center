@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:5000/services/dentistry";
+const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/dentistry";
 
 
 const table: HTMLTableElement = document.querySelector(".pricelist-table");
