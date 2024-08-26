@@ -48,6 +48,7 @@ main.main {
 .btn {
   display: block;
   width: fit-content;
+  cursor: pointer;
   @include btn();
 }
 .btn:hover {

@@ -46,8 +46,9 @@ function renderReviews(reviews: Review[]) {
 const nameInput: HTMLInputElement = document.querySelector(".comments-form_form_inputs_name");
 const textTextarea: HTMLTextAreaElement = document.querySelector("body > div.wrapper > main > div > div > div > section.comments-form > form > div > textarea");
 const btn: HTMLButtonElement = document.querySelector("body > div.wrapper > main > div > div > div > section.comments-form > form > input");
+const form: HTMLFormElement = document.querySelector(".comments-form_form");
 
-btn.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     fetch(REVIEWS_URL, {
         method: 'POST',
@@ -61,12 +62,6 @@ btn.addEventListener("click", (e) => {
         })
     })
         .then(response => {
-            console.log(response);
-            console.log(response.json());
-            return response.json();
-        })
-        .then(data => {
-            renderReviews(data);
             fetch(REVIEWS_URL, {
                 method: 'GET',
                 headers: {
@@ -80,11 +75,18 @@ btn.addEventListener("click", (e) => {
                     return response.json();
                 })
                 .then(data => {
-                    console.log(data);
                     renderReviews(data);
+                    nameInput.value = "";
+                    textTextarea.value = "";
+                    alert("Отзыв отправлен");
                 })
                 .catch(error => {
                     console.log(error);
-                });            
+                });
+            return response.json();
+        })
+        .then(data => {
+            console.log("tyt");
+            renderReviews(data);            
         })
 })

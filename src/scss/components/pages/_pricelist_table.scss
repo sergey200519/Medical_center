@@ -13,6 +13,9 @@
                 text-align: center;
                 padding: 10px;
             }
+            > th:nth-child(3) {
+                min-width: 130px;
+            }
         }
     }
     tbody {
@@ -25,7 +28,7 @@
             }
         }
         tr {
-            td:nth-child(1) {
+            td {
                 text-align: center;
             }
         }
