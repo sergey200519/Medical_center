@@ -35,7 +35,7 @@ export abstract class SwiperBase implements Swiper {
     protected options: Options;
     protected slides: NodeListOf<HTMLElement>;
     protected activeSlide: HTMLElement;
-    protected nActiveSlide: number; 
+    protected nActiveSlide: number;
     protected swiperPaginationItems: NodeListOf<HTMLElement>;
     protected swiperPaginationItemActive: HTMLElement;
     protected nSlides: number;
@@ -47,20 +47,27 @@ export abstract class SwiperBase implements Swiper {
     constructor(swiper: HTMLElement, options: Options) {
         this.swiper = swiper;
         this.options = options;
-        
 
+        console.log(this.swiper);
         this.slides = this.swiper.querySelectorAll(`:scope .${options.slideClass}`);
         this.nSlides = this.slides.length;
         this.nActiveSlide = 0;
 
         if (this.options.swipe.swipe == "class") {
             this.activeSlide = this.swiper.querySelector(`:scope .${this.options.swipe.class}`);
+            if (this.activeSlide == undefined && this.slides.length > 0) {
+                this.activeSlide = this.slides[0];
+                this.activeSlide.classList.add(this.options.swipe.class);
+            }
         }
 
 
         if (this.options.pagination) {
             this.swiperPaginationItems = this.swiper.querySelectorAll(`.${this.options.paginationClass}`);
             this.swiperPaginationItemActive = this.swiper.querySelector(`.${this.options.paginationClassActive}`);
+            if (this.swiperPaginationItemActive == undefined && this.swiperPaginationItems.length > 0) {
+                this.swiperPaginationItemActive = this.swiperPaginationItems[0];
+            }
         }
 
         if (this.options.autoPlay) {

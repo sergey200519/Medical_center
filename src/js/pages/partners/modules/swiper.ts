@@ -1,0 +1,7 @@
+
+
+class PartnersSwiper {
+    constructor() {
+        
+    }
+}
