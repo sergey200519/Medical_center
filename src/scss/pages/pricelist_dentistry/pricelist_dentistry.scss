@@ -6,3 +6,24 @@
 @import "../../components/pages/pricelist_table";
 
 @import "components/links";
+
+.pricelist {
+    &_box {
+        display: flex;
+        flex-direction: column;
+        details {
+            padding: 15px 5px 15px 5px;
+            background-color: rgba($color: $darkblue, $alpha: 0.1);
+            // border-radius: var(--border-radius);
+            summary {
+                cursor: pointer;
+                list-style-position: outside;
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+            table {
+                padding-left: 30px;
+            }
+        }
+    }
+}

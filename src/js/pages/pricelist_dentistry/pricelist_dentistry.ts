@@ -1,8 +1,10 @@
 const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/dentistry";
 
 
-const table: HTMLTableElement = document.querySelector(".pricelist-table");
+const table: HTMLTableElement = document.querySelector(".api-table");
 const linksUl: HTMLUListElement = document.querySelector(".pricelist-links");
+
+
 
 interface Service {
     price: string;
@@ -30,37 +32,37 @@ interface Services {
 // }
 
 
-function sort(services: Services) {
-    let max: number = 0;
-    const temp: {
-        [key: number]: string;
-    } = {}
-    for (const [key, value] of Object.entries(services)) {
-        for (const [k, v] of Object.entries(value)) {
-            temp[Math.trunc(Number(k))] = key;
-            if (Math.trunc(Number(k)) > max) max = Math.trunc(Number(k));
-            break
-        }
-    }
-    let a = {
-        1.9: ""
-    }
+// function sort(services: Services) {
+//     let max: number = 0;
+//     const temp: {
+//         [key: number]: string;
+//     } = {}
+//     for (const [key, value] of Object.entries(services)) {
+//         for (const [k, v] of Object.entries(value)) {
+//             temp[Math.trunc(Number(k))] = key;
+//             if (Math.trunc(Number(k)) > max) max = Math.trunc(Number(k));
+//             break
+//         }
+//     }
+//     let a = {
+//         1.9: ""
+//     }
 
-    let res: Services = {}
-    for (let i = 1; i <= max; i++) {
-        console.log(temp[i], services[temp[i]]);
-        res[temp[i]] = services[temp[i]]
-        let temp_local: {
-            [key: number]: Object;
-        } = {};
-        for (const [key, value] of Object.entries(services[temp[i]])) {
-            temp_local[Number(key)] = value;
-        }
-        console.log(temp_local, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-    }
+//     let res: Services = {}
+//     for (let i = 1; i <= max; i++) {
+//         console.log(temp[i], services[temp[i]]);
+//         res[temp[i]] = services[temp[i]]
+//         let temp_local: {
+//             [key: number]: Object;
+//         } = {};
+//         for (const [key, value] of Object.entries(services[temp[i]])) {
+//             temp_local[Number(key)] = value;
+//         }
+//         console.log(temp_local, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+//     }
 
-    return res
-}
+//     return res
+// }
 
 function render(services: Services) {
     let tableCode: string = `
@@ -72,9 +74,13 @@ function render(services: Services) {
             </tr>
         </thead>
     `;
+
+    
+
     let ulCode: string = ``;
     let idNumber: number = 0;
     for (const [key, value] of Object.entries(services)) {
+        let detailsCode = "";
         let id: string = `services-${idNumber}`
         let tbodyCode: string = `
             <tr id="${id}">
