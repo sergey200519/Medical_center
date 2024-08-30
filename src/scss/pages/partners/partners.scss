@@ -5,6 +5,21 @@
 
 @import "../../components/_swiper_one_slide";
 
-p {
-    margin-bottom: 15px;
+.partners {
+    &_list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--main_gap);
+        &_partner {
+            display: flex;
+            align-items: center;
+            gap: var(--main_gap);
+            &-left {
+                img {
+                    display: block;
+                    max-width: 120px;
+                }
+            }
+        }
+    }
 }

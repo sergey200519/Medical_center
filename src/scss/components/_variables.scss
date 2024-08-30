@@ -12,6 +12,7 @@
     --container-padding: 25px;
     // section
     --section_gap: 30px;
+    --main_gap: calc(var(--section_gap) / 2);
     // li
     --li_active_before_top: 0;
     // border
