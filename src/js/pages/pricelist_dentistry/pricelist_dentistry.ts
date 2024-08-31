@@ -1,10 +1,6 @@
 const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/dentistry";
 
-
-const table: HTMLTableElement = document.querySelector(".api-table");
-const linksUl: HTMLUListElement = document.querySelector(".pricelist-links");
-
-
+const pricelistBox = document.querySelector(".det");
 
 interface Service {
     price: string;
@@ -20,83 +16,25 @@ interface Services {
 }
 
 
-// type Services = {
-//     string: {
-//         number: {
-//             number: {
-//                 price: string;
-//                 service: string;
-//             }
-//         }
-//     }
-// }
-
-
-// function sort(services: Services) {
-//     let max: number = 0;
-//     const temp: {
-//         [key: number]: string;
-//     } = {}
-//     for (const [key, value] of Object.entries(services)) {
-//         for (const [k, v] of Object.entries(value)) {
-//             temp[Math.trunc(Number(k))] = key;
-//             if (Math.trunc(Number(k)) > max) max = Math.trunc(Number(k));
-//             break
-//         }
-//     }
-//     let a = {
-//         1.9: ""
-//     }
-
-//     let res: Services = {}
-//     for (let i = 1; i <= max; i++) {
-//         console.log(temp[i], services[temp[i]]);
-//         res[temp[i]] = services[temp[i]]
-//         let temp_local: {
-//             [key: number]: Object;
-//         } = {};
-//         for (const [key, value] of Object.entries(services[temp[i]])) {
-//             temp_local[Number(key)] = value;
-//         }
-//         console.log(temp_local, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
-//     }
-
-//     return res
-// }
+let pricelistCode = "";
 
 function render(services: Services) {
-    let tableCode: string = `
-        <thead>
-            <tr>
-                <th id="keys">Код</th>
-                <th>Название услуги</th>
-                <th>Цена(в руб.)</th>
-            </tr>
-        </thead>
-    `;
-
-    
-
-    let ulCode: string = ``;
-    let idNumber: number = 0;
     for (const [key, value] of Object.entries(services)) {
-        let detailsCode = "";
-        let id: string = `services-${idNumber}`
+        let tableCode: string = `
+            <thead>
+                <tr>
+                    <th id="keys">Код</th>
+                    <th>Название услуги</th>
+                    <th>Цена(в руб.)</th>
+                </tr>
+            </thead>
+        `;
         let tbodyCode: string = `
-            <tr id="${id}">
+            <tr>
                 <th scope="rowgroup" headers="keys" colspan="3">${key}</th>
             </tr>
         `;
-
-        ulCode += `
-            <li><a href="#${id}">${key}</a></li>
-        `
-        idNumber++;
-
-        let tdsCode: string = ``;
-        
         for (const [k, v] of Object.entries(value)) {
-            // console.log(k, typeof k);
             if (Object.keys(v).length == 1) {
                 tbodyCode += `
                     <tr>
@@ -124,21 +62,24 @@ function render(services: Services) {
                                 <th scope="row">${s.service}</th>
                                 <td>${s.price}</td>
                             </tr>
-                        `
+                        `;
                     }
                 }
             }
         }
-        tableCode += `
-            <tbody>
-                ${tbodyCode}
-            </tbody>
-        `
-        // console.log(key, value, "first loop");
+        tableCode += tbodyCode;
+        pricelistCode += `
+            <details>
+                <summary>${key}</summary>
+                <table class="pricelist-table">
+                    ${tableCode}
+                </table>
+            </details>
+        `;
     }
-    table.innerHTML = tableCode;
-    linksUl.innerHTML = ulCode;
+    pricelistBox.innerHTML = pricelistCode;
 }
+
 
 
 
@@ -156,12 +97,8 @@ fetch(url, {
         return response.json();
     })
     .then(data => {
-        // const keys: string[] = Object.keys(data).reverse();
-        // // render(data, keys);
-        // sort(data)
         console.log(data);
-        // render(sort(data))
-        render(data)
+        render(data);
     })
     .catch(error => {
         console.log(error);
