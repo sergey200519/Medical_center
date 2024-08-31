@@ -12,12 +12,17 @@
         gap: var(--main_gap);
         &_partner {
             display: flex;
-            align-items: center;
             gap: var(--main_gap);
             &-left {
                 img {
                     display: block;
                     max-width: 120px;
+                }
+            }
+            &-right {
+                img {
+                    width: 300px;
+                    float: right;
                 }
             }
         }
