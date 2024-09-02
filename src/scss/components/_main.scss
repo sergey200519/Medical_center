@@ -17,12 +17,12 @@
 }
 // .main {
 //   flex: 1 1 auto;
-  
+
 // }
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0  var(--container-padding);
+  padding: 0 var(--container-padding);
 }
 .wrap {
   display: flex;
@@ -83,9 +83,33 @@ a {
 }
 
 details[open] summary ~ * {
-  animation: sweep .8s ease-in-out;
+  animation: sweep 0.8s ease-in-out;
 }
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -50px}
-  100%  {opacity: 1; margin-left: 0px}
+  0% {
+    opacity: 0;
+    margin-left: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+ul.marker {
+  li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/arrow_pink.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
