@@ -11,10 +11,20 @@
         flex-direction: column;
         gap: 15px;
         margin: auto;
-        padding: 15px;
+        padding: 30px;
         border-radius: var(--border-radius);
         background: var(--white);
         scale: .1;
+        overflow: scroll;
+        max-height: 80vh;
+        p {
+            max-width: 500px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .h2 {
+            text-align: center;
+        }
         &.open {
             scale: 1;
         }
