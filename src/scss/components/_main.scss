@@ -13,12 +13,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background: var(--page-background);
 }
 // .main {
 //   flex: 1 1 auto;
 
 // }
+.main {
+  background: var(--page-background);
+}
 .container {
   max-width: 1920px;
   margin: 0 auto;
