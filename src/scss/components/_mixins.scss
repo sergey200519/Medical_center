@@ -21,3 +21,10 @@ $border_radius: var(--border-radius)) {
     line-height: $lh;
     text-align: $pos;
 }
+
+@mixin text_with_highlights($color) {
+    span {
+        font-weight: 600;
+        color: #{$color};
+    }
+}

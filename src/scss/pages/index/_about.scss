@@ -1,0 +1,11 @@
+.about {
+    p {
+        @extend .text_with_highlights;
+        a {
+            font-weight: 600;
+        }
+        &:nth-child(2) {
+            margin-bottom: 10px;
+        }
+    }
+}

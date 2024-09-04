@@ -16,9 +16,6 @@
     img {
         width: 200px;
     }
-    // img:nth-child(1) {
-    //     max-width: 100px;
-    // }
 }
 
 .stomatology-laboratory_services {
@@ -62,4 +59,13 @@
 .link {
     color: var(--darkblue);
     text-decoration: underline;
+}
+
+.text_with_highlights_pink {
+    @include text_with_highlights($color: var(--darkpink));
+}
+.text_with_highlights {
+    span {
+        font-weight: 600;
+    }
 }
