@@ -100,10 +100,12 @@ details[open] summary ~ * {
 
 ul.marker {
   li {
+    position: relative;
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 5px;
+    padding-left: 25px;
   }
   li::before {
     content: "";
@@ -112,6 +114,12 @@ ul.marker {
     height: 20px;
     background-image: url("../../img/arrow_pink.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 20px;
+    position: absolute;
+    top: 0;
+    // bottom: 0;
+    // margin-top: auto;
+    // margin-bottom: auto;
+    left: 0;
   }
 }

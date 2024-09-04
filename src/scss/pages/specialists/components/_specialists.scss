@@ -1,47 +1,50 @@
 .specialists {
     &_list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 50px;
-        @media (max-width: 1280px) {
-            grid-template-columns: 1fr;
-        }
         &_item {
             display: grid;
-            grid-template-columns: 200px 1fr;
+            grid-template-columns: 200px 1fr 300px;
             gap: 15px;
             width: fit-content;
-            @media (max-width: 568px) {
-                grid-template-columns: 100px 1fr;
-            }
-            @media (max-width: 375px) {
+            @media (max-width: 1024px) {
                 grid-template-columns: 1fr;
             }
             img {
+                display: block;
                 width: 100%;
                 box-shadow: 14px 14px 10px 5px rgba($color: $darkblue, $alpha: 0.15);
+                @media (max-width: 1024px) {
+                    width: 30%;
+                    margin: 0 auto;
+                }
+                @media (max-width: 768px) {
+                    width: 40%;
+                }
+                @media (max-width: 568px) {
+                    width: 50%;
+                }
+                @media (max-width: 425px) {
+                    width: 60%;
+                }
             }
-            &_info {
+            &-info {
                 h3 {
                     margin-top: 0;
                 }
+                p {
+                    margin-bottom: var(--base_mb);
+                }
+            }
+            &-skills {
                 h4 {
                     margin-bottom: 5px;
                     color: var(--darkpink);
                     text-decoration: underline;
                 }
-                ul {
-                    padding: 0 0 15px 30px;
-                    li {
-                        list-style-type: initial;
-                        padding-left: 5px;
-                    }
-                }
-                p:last-child {
-                    color: var(--darkpink);
-                    text-decoration: underline;
-                }
             }
         }
+        
     }
 }
