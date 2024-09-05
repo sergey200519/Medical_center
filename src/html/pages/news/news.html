@@ -30,7 +30,8 @@
 						"page": "news"
 					})
 					<div class="content">
-                        @@include('components/_news_list.html', {})
+                        @@include('components/_new_modal.html', {})
+						@@include('components/_news_list.html', {})
 					</div>
 				</div>
 			</div>
@@ -42,5 +43,6 @@
         })
 	</div>
 	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
+	<script defer type="module" src="../../../js/pages/news/news.min.js"></script>
 </body>
 </html>

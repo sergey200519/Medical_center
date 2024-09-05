@@ -1,0 +1,37 @@
+.news-modal {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: rgba($color: $black, $alpha: 0.7);
+    &.open {
+        .news-modal_body {
+            scale: 1;
+        }
+    }
+    &_body {
+        position: relative;
+        width: 80%;
+        max-height: 80%;
+        overflow-y: scroll;
+        margin: auto;
+        padding: 30px;
+        background: var(--white);
+        border-radius: var(--border-radius);
+        scale: .1;
+        &_clouse {
+            display: block;
+            width: 20px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+        &_title {
+            text-align: center;
+        }
+    }
+}
