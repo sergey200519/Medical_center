@@ -1,7 +1,7 @@
 .stocks {
     &_info {
-        margin-top: var(--base_mb);
-        margin-bottom: var(--base_mb);
+        margin-top: var(--main_gap);
+        margin-bottom: var(--main_gap);
     }
     &_phones {
         @extend .phones;
