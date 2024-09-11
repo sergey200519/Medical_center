@@ -22,7 +22,15 @@
         }
         &_address {
             color: var(--darkblue);
-            font-weight: 700;
+            p {
+                font-weight: 700;
+                &:nth-child(2) {
+                    color: var(--darkpink);
+                }
+                @media (max-width: 1024px) {
+                    text-align: center;
+                }
+            }
             @media (max-width: 1024px) {
                 align-self: flex-start;
             }
@@ -35,8 +43,10 @@
             flex-direction: column;
             gap: 5px;
             p {
+                text-align: center;
                 margin: 0;
                 color: var(--darkblue);
+                font-weight: 700;
                 span {
                     color: var(--darkpink);
                     font-weight: 700;
