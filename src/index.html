@@ -33,15 +33,18 @@
 						"page": "index"
 					})
 					<div class="content">
-						@@include('html/pages/index/_about.html',{})
+						
 						<div class="two_sections_index">
 							<div class="">
 								@@include('html/pages/index/_stomatology.html',{})
 							</div>
+							<div class="line"></div>
 							<div class="">
 								@@include('html/pages/index/_laboratory.html',{})
 							</div>
 						</div>
+						@@include('html/pages/index/_head_physician.html',{})
+						@@include('html/pages/index/_about.html',{})
 					</div>
 				</div>
 			</div>

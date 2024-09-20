@@ -1,8 +1,16 @@
 .two_sections_index {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    @media (max-width: 768px) {
+    grid-template-columns: 1fr 1px 1fr;
+    gap: var(--main_gap);
+    justify-content: space-between;
+    margin-bottom: var(--section_gap);
+    @media (max-width: 1280px) {
         grid-template-columns: 1fr;
+    }
+    .line {
+        background: var(--darkblue);
+        @media (max-width: 1280px) {
+            display: none;
+        }
     }
 }

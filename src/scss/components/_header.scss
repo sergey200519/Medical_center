@@ -1,5 +1,5 @@
 .topheader {
-    background: linear-gradient(var(--white), var(--page-background));
+    // background: linear-gradient(var(--white), var(--page-background));
     .container {
         display: flex;
         flex-direction: row;
@@ -63,6 +63,7 @@
                     @include font(var(--normal-fz));
                     span {
                         margin: auto;
+                        font-weight: 700;
                     }
                     @media (max-width: 1280px) {
                         padding: 14px 20px;

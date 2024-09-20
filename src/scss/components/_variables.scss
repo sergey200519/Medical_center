@@ -6,13 +6,14 @@
     --main_font-family: "Roboto", sans-serif;
     --small-fz: 16px;
     --normal-fz: 18px;
-    --big-fz: 20px;
-    --h3-fz: 22px;
+    --big-fz: 22px;
+    --h2-fz: 40px;
+    --h3-fz: 28px;
     // container
     --container-padding: 25px;
     // section
     --section_gap: 30px;
-    --main_gap: calc(var(--section_gap) / 2);
+    --main_gap: calc(var(--section_gap) / 1.5);
     // li
     --li_active_before_top: 0;
     // border
