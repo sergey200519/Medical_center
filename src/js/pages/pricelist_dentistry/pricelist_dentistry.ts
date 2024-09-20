@@ -1,4 +1,4 @@
-const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/dentistry";
+const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/laboratory";
 
 const pricelistBox = document.querySelector(".det");
 
@@ -10,6 +10,11 @@ interface Service {
 interface Services {
     [key: string]: {
         [key: number]: {
+            price: any;
+            date: any;
+            bio: any;
+            type: any;
+            service: any;
             [key: number]: Service
         }
     }
@@ -31,7 +36,7 @@ function render(services: Services) {
         `;
         let tbodyCode: string = `
             <tr>
-                <th scope="rowgroup" headers="keys" colspan="3">${key}</th>
+                <th scope="rowgroup" headers="keys" colspan="3" class="sub-title">${key}</th>
             </tr>
         `;
         for (const [k, v] of Object.entries(value)) {

@@ -19,13 +19,11 @@
         }
     }
     tbody {
-        > tr:nth-child(1) {
-            th {
-                background: rgba($color: $darkblue, $alpha: 0.3);
-                @include font(var(--big-fz), $fw: 600, $pos: center);
-                padding: 15px;
-                text-transform: uppercase;
-            }
+        .sub-title {
+            background: rgba($color: $darkblue, $alpha: 0.3);
+            @include font(var(--big-fz), $fw: 600, $pos: center);
+            padding: 15px;
+            text-transform: uppercase;
         }
         tr {
             td {
