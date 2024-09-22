@@ -1,30 +1,42 @@
 <header class="topheader">
-    <div class="container">
-      <div class="topheader_mobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="topheader_logo">
-        <a href="/">
-          @@if (page === "index") {
-            <!-- <img src="img/sity_logo.png" alt=""> -->
+  <div class="container">
+    <div class="topheader_mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="topheader_logo">
+      <a href="/">
+        <!-- @@if (page === "index") {
             <img src="img/logo.svg" alt="" srcset="">
           }
           @@if (page !== "index") {
-            <!-- <img src="@@pagesPath/img/sity_logo.png" alt=""> -->
             <img src="@@pagesPath/img/logo.svg" alt="" srcset="">
+          } -->
+        <div class="topheader_logo_left">
+          <span>стомсити.рф</span>
+          <span>стоматлогия</span>
+        </div>
+        <div class="line"><span></span><span></span></div>
+        <div class="topheader_logo_right">
+          @@if (page === "index") {
+          <img src="img/sity_logo.png" alt="" srcset="">
           }
-        </a>
+          @@if (page !== "index") {
+          <img src="@@pagesPath/img/sity_logo.png" alt="" srcset="">
+          }
+          <span>международная сеть лабораторий</span>
+        </div>
+      </a>
 
-      </div>
-      <nav class="topheader_navigation headernav">
-        <ul class="headernav_ul">
-          @@include('_header_menu_items.html',{
-            "page": "@@page"
-          })
-        </ul>
-      </nav>
-      <a href="" class="topheader_appointment appointment_btn">Запись на приём</a>
     </div>
+    <nav class="topheader_navigation headernav">
+      <ul class="headernav_ul">
+        @@include('_header_menu_items.html',{
+        "page": "@@page"
+        })
+      </ul>
+    </nav>
+    <a href="" class="topheader_appointment appointment_btn">Запись на приём</a>
+  </div>
 </header>

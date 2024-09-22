@@ -33,14 +33,49 @@
         }
     }
     &_logo {
-        @extend .logo_topheader;
+        // @extend .logo_topheader;
         margin: 10px 0;
-        @media (max-width: 1280px) {
-            max-width: 120px;
-            img {
-                width: 100%;
+        a {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            span {
+                display: block;
+                color: var(--darkblue);
+            }
+            .topheader_logo_left {
+                width: fit-content;
+                span {
+                    @include font(1.2em, $fw: 500);
+                }
+            }
+            .line {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 85px;
+                span {
+                    width: 2px;
+                    height: 25px;
+                    background: var(--darkpink);
+                }
+            }
+            .topheader_logo_right {
+                img {
+                    max-width: 150px;
+                }
+                span {
+                    max-width: 150px;
+                    @include font(.8em, $pos: center);
+                }
             }
         }
+        // @media (max-width: 1280px) {
+        //     max-width: 120px;
+        //     img {
+        //         width: 100%;
+        //     }
+        // }
         @media (max-width: 1024px) {
             display: none;
         }

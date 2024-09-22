@@ -1,4 +1,4 @@
-const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/laboratory";
+const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/dentistry";
 
 const pricelistBox = document.querySelector(".det");
 
