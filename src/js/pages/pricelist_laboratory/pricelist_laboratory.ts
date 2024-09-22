@@ -28,7 +28,6 @@ function render(services: Services) {
                 <tr>
                     <th id="keys">Код</th>
                     <th>Название услуги</th>
-                    <th>Тип иссл.</th>
                     <th>Биоматериал</th>
                     <th>Срок</th>
                     <th>Цена(в руб.)</th>
@@ -40,7 +39,7 @@ function render(services: Services) {
         for (const [k, v] of Object.entries(value)) {
             tbodyCode += `
                 <tr>
-                    <th scope="rowgroup" headers="keys" colspan="6" class="sub-title">${k}</th>
+                    <th scope="rowgroup" headers="keys" colspan="5" class="sub-title">${k}</th>
                 </tr>
             `;
             for (const [k2, v2] of Object.entries(v)) {
@@ -48,7 +47,6 @@ function render(services: Services) {
                     <tr>
                         <td>${k2}</td>
                         <th scope="row">${v2.name}</th>
-                        <td>${v2.type}</td>
                         <td>${v2.bio}</td>
                         <td>${v2.date}</td>
                         <td>${v2.price}</td>
