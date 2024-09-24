@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('@@pagesPath/../../html/components/_head.html', {
+	"title": "Стоматология - Прейскурант", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/../../css/pages/specialists/specialist.min.css\"/>",
+    "page": "specialists_pages"
+})
+
+<body>
+	@@include('@@pagesPath/../../html/components/_mobile_menu.html',{
+        "page": "specialists_pages"
+    })
+	@@include('@@pagesPath/../../html/components/_appointment_modal.html', {
+		"page": "specialists_pages"
+	})
+	<div class="wrapper">
+		@@include('@@pagesPath/../../html/components/_header_info.html',{
+            "page": "specialists_pages"
+        })
+
+		@@include('@@pagesPath/../../html/components/_header.html',{
+            "page": "specialists_pages"
+        })
+        
+		<main class="main">
+			<div class="container">
+				<div class="wrap">
+					@@include('@@pagesPath/../../html/components/_aside.html',{
+						"page": "specialists_pages"
+					})
+					<div class="content">
+                        <div class="specialist">
+                            <img src="@@pagesPath/../../img/specialist3.png" alt="">
+                            <div class="">
+                                <div class="specialist-header">
+                                    <h3>Донская Елена Александровна</h3>
+                                    <p>стоматолог - терапевт</p>
+                                </div>
+                                <div class="specialist_bottom">
+                                    <div class="specialist_bottom-info">
+                                        <h4>Квалификация</h4>
+                                        <ul class="marker">
+                                            <li>Московский государственный медико-стоматологический университет, присуждена квалификация
+                                                Врач-стоматолог 2003 г;</li>
+                                            <li>Московский областной научно-исследовальский клинический институт им. М.Ф
+                                                Владимирского-2006 год;
+                                            </li>
+                                            <li>Повышение квалификации в ГБУЗ МО МОНИКИ им М.Ф. Владимирского по программе: Стоматология
+                                                хирургическая 2012 г;</li>
+                                            <li>Повышение квалификации в ГБУЗ МО МОНИКИ им М.Ф. Владимирского по программе: Стоматология
+                                                терапевтическая 2016;</li>
+                                            <li>Повышение квалификации ООО" Центр специализированного Образования" "Проф-Ресурс" "
+                                                Стоматология
+                                                терапевтическая" 2020г;</li>
+                                            <li>Повышение квалификации ООО" Центр специализированного Образования" "Проф-Ресурс"
+                                                "Стоматология-хирургическая" 2020г;</li>
+                                        </ul>
+                                    </div>
+                                    <div class="specialist_bottom-skills">
+                                        <h4>Навыки</h4>
+                                        <p>Ведение терапевтического приема в полном объеме, эндодонтическое лечение на высоком уровне,
+                                            использование современных технологий и материалов, художественные реставрации, работа в
+                                            четыре руки,
+                                            чтение рентгеновских снимков ЗЧС,описание КТ,ОПТГ, профессиональная гигиена полости рта,
+                                            отбеливание,лечение поражений слизистой оболочки и дёсен.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@pagesPath/../../html/components/_footer.html',{
+            "page": "specialists_pages"
+        })
+	</div>
+	<script defer type="module" src="@@pagesPath/../../js/script.min.js"></script>
+</body>
+</html>

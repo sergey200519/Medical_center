@@ -6,16 +6,24 @@
                 @@if (page === "index") {
                     <img src="img/arrow_pink.png" alt="">
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <img src="@@pagesPath/../../img/arrow_pink.png" alt="">
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <img src="@@pagesPath/img/arrow_pink.png" alt="">
                 }
+                
             </div>
             <menu class="asidemenu_menu_item_submenu submenu">
                 @@if (page === "index") {
                     <li><a href="html/pages/dentistry/dentistry.html">Стоматология</a></li>
                     <li><a href="html/pages/laboratory/laboratory.html">Лаболатория</a></li>
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <li><a href="../../../dentistry/dentistry.html">Стоматология</a></li>
+                    <li><a href="../../../laboratory/laboratory.html">Лаболатория</a></li>
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <li><a href="../dentistry/dentistry.html">Стоматология</a></li>
                     <li><a href="../laboratory/laboratory.html">Лаболатория</a></li>
                 }
@@ -27,7 +35,10 @@
                 @@if (page === "index") {
                     <img src="img/arrow_pink.png" alt="">
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <img src="@@pagesPath/../../img/arrow_pink.png" alt="">
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <img src="@@pagesPath/img/arrow_pink.png" alt="">
                 }
             </div>
@@ -36,7 +47,11 @@
                     <li><a href="html/pages/pricelist_dentistry/pricelist_dentistry.html">Прейскурант - Стоматология</a></li>
                     <li><a href="html/pages/pricelist_laboratory/pricelist_laboratory.html">Прейскурант - Лаболатория</a></li>
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <li><a href="../../../pricelist_dentistry/pricelist_dentistry.html">Прейскурант - Стоматология</a></li>
+                    <li><a href="../../../pricelist_laboratory/pricelist_laboratory.html">Прейскурант - Лаболатория</a></li>
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <li><a href="../pricelist_dentistry/pricelist_dentistry.html">Прейскурант - Стоматология</a></li>
                     <li><a href="../pricelist_laboratory/pricelist_laboratory.html">Прейскурант - Лаболатория</a></li>
                 }
@@ -47,7 +62,10 @@
                 @@if (page === "index") {
                     <a href="html/pages/specialists/specialists.html" class="asidemenu_menu_item_link">Специалисты</a>
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <a href="../../../specialists/specialists.html" class="asidemenu_menu_item_link">Специалисты</a>
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <a href="../specialists/specialists.html" class="asidemenu_menu_item_link">Специалисты</a>
                 }
             </div>
@@ -67,7 +85,10 @@
                 @@if (page === "index") {
                     <a href="html/pages/stocks/stocks.html" class="asidemenu_menu_item_link">Акции</a>
                 }
-                @@if (page !== "index") {
+                @@if (page === "specialists_pages") {
+                    <a href="../../../stocks/stocks.html" class="asidemenu_menu_item_link">Акции</a>
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
                     <a href="../stocks/stocks.html" class="asidemenu_menu_item_link">Акции</a>
                 }
             </div>

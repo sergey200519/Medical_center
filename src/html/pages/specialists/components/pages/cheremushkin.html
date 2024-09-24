@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('@@pagesPath/../../html/components/_head.html', {
+	"title": "Стоматология - Прейскурант", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/../../css/pages/specialists/specialist.min.css\"/>",
+    "page": "specialists_pages"
+})
+
+<body>
+	@@include('@@pagesPath/../../html/components/_mobile_menu.html',{
+        "page": "specialists_pages"
+    })
+	@@include('@@pagesPath/../../html/components/_appointment_modal.html', {
+		"page": "specialists_pages"
+	})
+	<div class="wrapper">
+		@@include('@@pagesPath/../../html/components/_header_info.html',{
+            "page": "specialists_pages"
+        })
+
+		@@include('@@pagesPath/../../html/components/_header.html',{
+            "page": "specialists_pages"
+        })
+        
+		<main class="main">
+			<div class="container">
+				<div class="wrap">
+					@@include('@@pagesPath/../../html/components/_aside.html',{
+						"page": "specialists_pages"
+					})
+					<div class="content">
+                        <div class="specialist">
+                            <img src="@@pagesPath/../../img/specialist4.png" alt="">
+                            <div class="">
+                                <div class="specialist-header">
+                                    <h3>Черемушкин Артем Николаевич</h3>
+                                    <p>Стоматология хирургическая</p>
+                                </div>
+                                <div class="specialist_bottom">
+                                    <div class="specialist_bottom-info">
+                                        <h4>Квалификация</h4>
+                                        <ul class="marker">
+                                            <li>Алтайский Государственный Медицинский университет 2013год специальность "Стоматология".</li>
+                                            <li>Российский университет дружба народов прошел профессиональную переподготовку на Кафедре
+                                                челюстно-лицевой хирургии по программе Стоматология хирургическая 2016 г.</li>
+                                            <li>Повышение квалификации Стоматология хирургическая 2016 г; ГБОУ ДПО НГИУВ Минздрава России
+                                                "Стоматология общей практики".</li>
+                                            <li>Автономная некоммерческая организация дополнительного профессионального образования "Медицинский
+                                                университет инноваций и развития" "Стоматология хирургическая"2020 год.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="specialist_bottom-skills">
+                                        <h4>Навыки</h4>
+                                        <p>Занимается удалением зубов, установкой зубных имплантов при полном или частичном протезировании,
+                                            выполняет цистэктомию и другие операции по удалению кист и вскрытию абсцессов в ротовой
+                                            полости.проводит диагностику и лечение пациентов с травмами и заболеваниями области лица. Оказывает
+                                            помощь при гнойном воспалении, патологии сустава нижней челюсти, заболеваниях слюнных желез и
+                                            опухолевых процессах лицевой области.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+                            
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@pagesPath/../../html/components/_footer.html',{
+            "page": "specialists_pages"
+        })
+	</div>
+	<script defer type="module" src="@@pagesPath/../../js/script.min.js"></script>
+</body>
+</html>

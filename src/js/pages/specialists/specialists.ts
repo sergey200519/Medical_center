@@ -17,6 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+
+    [...document.querySelectorAll(".specialists_list_item")].forEach((specialistCard: HTMLDivElement) => {
+        specialistCard.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = `${window.location.href.replace("/specialists.html", "")}/components/pages/${specialistCard.getAttribute("data-page")}.html`
+        })
+    })
+
+    // setTimeout(() => {
+    //     window.location.href = `${window.location.href.replace("/specialists.html", "")}/components/pages/makova.html`
+    // }, 3000);
     
 
     // newServices(document.querySelector(".services_wrap"), {

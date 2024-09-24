@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('@@pagesPath/../../html/components/_head.html', {
+	"title": "Стоматология - Прейскурант", 
+	"more": "<link rel=\"stylesheet\" href=\"@@pagesPath/../../css/pages/specialists/specialist.min.css\"/>",
+    "page": "specialists_pages"
+})
+
+<body>
+	@@include('@@pagesPath/../../html/components/_mobile_menu.html',{
+        "page": "specialists_pages"
+    })
+	@@include('@@pagesPath/../../html/components/_appointment_modal.html', {
+		"page": "specialists_pages"
+	})
+	<div class="wrapper">
+		@@include('@@pagesPath/../../html/components/_header_info.html',{
+            "page": "specialists_pages"
+        })
+
+		@@include('@@pagesPath/../../html/components/_header.html',{
+            "page": "specialists_pages"
+        })
+        
+		<main class="main">
+			<div class="container">
+				<div class="wrap">
+					@@include('@@pagesPath/../../html/components/_aside.html',{
+						"page": "specialists_pages"
+					})
+					<div class="content">
+                        <div class="specialist">
+                            <img src="@@pagesPath/../../img/specialist2.png" alt="">
+                            <div class="">
+                                <div class="specialist-header">
+                                    <h3>Киотина Наталья Евгеньевна</h3>
+                                    <p>стоматолог - общей практики</p>
+                                </div>
+                                <div class="specialist_bottom">
+                                    <div class="specialist_bottom-info">
+                                        <h4>Квалификация</h4>
+                                        <ul class="marker">
+                                            <li>В 2015 году прошла повышение квалификации в ГБУЗ МО МОНИКИ им М.Ф. Владимирского по
+                                                программе
+                                                Стоматологическая помощь населению.</li>
+                                            <li>В 2009 году прошла повышение квалификации в Московском областном медицинском колледже по
+                                                программе Стоматологическая помощь населению;</li>
+                                            <li>В 1994 году окончила Ярославское медицинское училище № 1, присвоена квалификация Зубного
+                                                врача;
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="specialist_bottom-skills">
+                                        <h4>Навыки</h4>
+                                        <p>Врач-стоматолог общей практики с тридцатилетним стажем работы, успешно применяет современные
+                                            методы
+                                            лечения в области эндодоктии и оказывает неотложную хирургическую неотложную помощь. Она
+                                            также
+                                            обладает навыками ортопеда - стоматолога и владеют всеми методами съёмного и несъёмного
+                                            протезирования и протезирования на имплантат.</p>
+                                        <p>Индивидуальный подход к каждому пациенту и использование современных методов диагностики
+                                            позволяют
+                                            врачу обеспечивать высокое качество лечения и удовлетворят потребности своих пациентов.
+                                            Благодаря
+                                            огромной базе постоянных клиентов, врач имеет возможность оказывать качественную медицинскую
+                                            помощь
+                                            и поддерживать здоровье зубов своих пациентов на протяжении многих лет.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+		@@include('@@pagesPath/../../html/components/_footer.html',{
+            "page": "specialists_pages"
+        })
+	</div>
+	<script defer type="module" src="@@pagesPath/../../js/script.min.js"></script>
+</body>
+</html>

@@ -8,9 +8,12 @@
 				@@if (page === "index") {
 					<a href="html/pages/contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
 				}
-				@@if (page !== "index") {
-					<a href="../contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
-				}
+				@@if (page === "specialists_pages") {
+                    <a href="../../../contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
+                    <a href="../contacts/contacts.html" class="headerinfo_bottom_address">г. Москва ул. Трифоновская, 55</a>
+                }
 			</address>
 		</div>
 		<div>
@@ -21,8 +24,13 @@
 					<img src="img/mastercard.png" alt="мастер карта">
 					<img src="img/maestro_card.png" alt="карта маестро">
                 }
-                @@if (page !== "index") {
-					<img src="@@pagesPath/img/visa_card.png" alt="карта виза">
+				@@if (page === "specialists_pages") {
+                    <img src="@@pagesPath/../../img/visa_card.png" alt="карта виза">
+					<img src="@@pagesPath/../../img/mastercard.png" alt="мастер карта">
+					<img src="@@pagesPath/../../img/maestro_card.png" alt="карта маестро">
+                }
+                @@if (page !== "index" && page !== "specialists_pages") {
+                    <img src="@@pagesPath/img/visa_card.png" alt="карта виза">
 					<img src="@@pagesPath/img/mastercard.png" alt="мастер карта">
 					<img src="@@pagesPath/img/maestro_card.png" alt="карта маестро">
                 }
@@ -33,7 +41,11 @@
 				<a href="#"><img src="img/telegram.svg" alt=""></a>
 				<a href="#"><img src="img/whatsapp.svg" alt=""></a>
 			}
-			@@if (page !== "index") {
+			@@if (page === "specialists_pages") {
+				<a href="#"><img src="@@pagesPath/../../img/telegram.svg" alt=""></a>
+				<a href="#"><img src="@@pagesPath/../../img/whatsapp.svg" alt=""></a>
+			}
+			@@if (page !== "index" && page !== "specialists_pages") {
 				<a href="#"><img src="@@pagesPath/img/telegram.svg" alt=""></a>
 				<a href="#"><img src="@@pagesPath/img/whatsapp.svg" alt=""></a>
 			}
@@ -43,9 +55,12 @@
 				@@if (page === "index") {
                     <img src="img/phone.png" alt="">
                 }
-                @@if (page !== "index") {
+				@@if (page === "specialists_pages") {
+					<img src="@@pagesPath/../../img/phone.png" alt="">
+				}
+				@@if (page !== "index" && page !== "specialists_pages") {
 					<img src="@@pagesPath/img/phone.png" alt="">
-                }
+				}
 				<div class="">
 					@@include('_phones.html', {})
 				</div>
