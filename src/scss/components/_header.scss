@@ -45,8 +45,16 @@
             }
             .topheader_logo_left {
                 width: fit-content;
+
+                // height: 100%;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
                 span {
-                    @include font(1.2em, $fw: 500);
+                    @include font(1.2em, $fw: 500, $pos: right);
+                    &.title {
+                        @include font(1.5em, $fw: 700);
+                    }
                 }
             }
             .line {
@@ -66,7 +74,7 @@
                 }
                 span {
                     max-width: 150px;
-                    @include font(.8em, $pos: center);
+                    @include font(.8em);
                 }
             }
         }
