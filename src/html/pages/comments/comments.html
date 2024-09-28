@@ -29,9 +29,7 @@
 						"page": "comments"
 					})
 					<div class="content">
-						@@include('components/_comments_form.html',{})
-						@@include('components/_comments_list.html',{})
-						<!-- <div id="disqus_thread"></div>
+						<div id="disqus_thread"></div>
 						<script>
 							/**
 							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -49,7 +47,7 @@
 							(d.head || d.body).appendChild(s);
 							})();
 						</script>
-						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 					</div>
 				</div>
 			</div>
@@ -62,7 +60,7 @@
         })
 	</div>
 	<script defer type="module" src="@@pagesPath/js/script.min.js"></script>
-	<script defer type="module" src="@@pagesPath/js/pages/comments/comments.min.js"></script>
-	<!-- <script id="dsq-count-scr" src="//http-xn-h1aakhocee-xn-p1ai.disqus.com/count.js" async></script> -->
+	<!-- <script defer type="module" src="@@pagesPath/js/pages/comments/comments.min.js"></script> -->
+	<script id="dsq-count-scr" src="//http-xn-h1aakhocee-xn-p1ai.disqus.com/count.js" async></script>
 </body>
 </html>
