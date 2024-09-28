@@ -36,7 +36,9 @@ function render(services: Services) {
         `;
         let tbodyCode: string = `
             <tr>
-                <th scope="rowgroup" headers="keys" colspan="3" class="sub-title">${key}</th>
+                <th class="sub-title"></th>
+                <th scope="rowgroup" headers="keys" class="sub-title">${key}</th>
+                <th class="sub-title"></th>
             </tr>
         `;
         for (const [k, v] of Object.entries(value)) {

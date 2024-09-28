@@ -122,4 +122,16 @@ ul.marker {
     // margin-bottom: auto;
     left: 0;
   }
+  &-disc {
+    li {
+      // &::marker {
+      //   display: block;
+      //   padding-left: 15px;
+      //   // margin-left: 15px;
+      // }
+      list-style-position: inside;
+      // padding-left: 15px;
+      list-style-type: disc;
+    }
+  }
 }
