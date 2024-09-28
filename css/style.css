@@ -702,7 +702,7 @@ ul.marker-disc li {
   border-radius: var(--border-radius);
   background: var(--white);
   scale: 0.1;
-  overflow: scroll;
+  overflow: auto;
   max-height: 80vh;
 }
 
