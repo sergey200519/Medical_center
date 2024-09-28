@@ -18,7 +18,7 @@
         justify-content: space-between;
         gap: 10px;
         align-items: center;
-        @media (max-width: 1024px) {
+        @media (max-width: 1280px) {
             flex-direction: column;
         }
         &_address {
@@ -28,11 +28,11 @@
                 &:nth-child(2) {
                     color: var(--darkpink);
                 }
-                @media (max-width: 1024px) {
+                @media (max-width: 1280px) {
                     text-align: center;
                 }
             }
-            @media (max-width: 1024px) {
+            @media (max-width: 1280px) {
                 align-self: flex-start;
             }
             @media (max-width: 375px) {
@@ -57,11 +57,12 @@
         &_phones {
             display: flex;
             gap: 15px;
-            @media (max-width: 1024px) {
+            @media (max-width: 1280px) {
                 align-self: flex-end;
             }
             @media (max-width: 375px) {
                 align-self: center;
+                flex-direction: column;
             }
             @extend .phones;
             a {
