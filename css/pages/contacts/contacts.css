@@ -1,0 +1,216 @@
+.phones a,
+.contacts_info_body_phones td a {
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.phones a span,
+.contacts_info_body_phones td a span {
+  color: var(--red);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.logo_topheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo_topheader img {
+  width: 200px;
+}
+
+.stomatology-laboratory_services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stomatology-laboratory_services li {
+  width: 100%;
+}
+
+.stomatology-laboratory_services li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.stomatology-laboratory_services li a img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stomatology-laboratory_services li a:hover {
+  color: var(--white);
+  background: var(--darkblue);
+}
+
+.appointment_to_doctor {
+  padding: 15px 30px;
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  background: var(--darkpink);
+  border-radius: var(--border-radius);
+}
+
+.appointment_to_doctor:hover {
+  border-radius: calc(var(--border-radius) + 10px);
+}
+
+.link,
+.contacts_info_body_email td a,
+.contacts_info_body_phones td a {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+.text_with_highlights_pink span {
+  font-weight: 600;
+  color: var(--darkpink);
+}
+
+.text_with_highlights span {
+  font-weight: 600;
+}
+
+.two_sections_contacts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(100px, 400px) 1fr;
+  grid-template-columns: minmax(100px, 400px) 1fr;
+  gap: 30px;
+}
+
+.contacts {
+  margin-bottom: 0;
+}
+
+.contacts_info_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.contacts_info_body th {
+  vertical-align: top;
+  font-family: var(--main_font-family);
+  font-size: var(--normal-fz);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.contacts_info_body tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.contacts_info_body_phones td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.contacts_info_body_phones td a {
+  font-family: var(--main_font-family);
+  font-size: var(--normal-fz);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.contacts_info_body_phones td a span {
+  font-family: var(--main_font-family);
+  font-size: var(--normal-fz);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.contacts_info_body_schedule td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+.contactsmap {
+  margin-bottom: 0;
+}
+
+.contactsmap iframe {
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 1920px) {
+  .contactsmap iframe {
+    height: calc((100vw - 320px) / (1920 - 320) * (600 - 200) + 200px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .appointment_to_doctor {
+    padding: 14px 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .two_sections_contacts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}

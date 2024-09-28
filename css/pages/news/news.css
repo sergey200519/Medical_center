@@ -1,0 +1,262 @@
+.phones a {
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.phones a span {
+  color: var(--red);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.logo_topheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo_topheader img {
+  width: 200px;
+}
+
+.stomatology-laboratory_services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stomatology-laboratory_services li {
+  width: 100%;
+}
+
+.stomatology-laboratory_services li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.stomatology-laboratory_services li a img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stomatology-laboratory_services li a:hover {
+  color: var(--white);
+  background: var(--darkblue);
+}
+
+.appointment_to_doctor {
+  padding: 15px 30px;
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  background: var(--darkpink);
+  border-radius: var(--border-radius);
+}
+
+.appointment_to_doctor:hover {
+  border-radius: calc(var(--border-radius) + 10px);
+}
+
+.link {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+.text_with_highlights_pink span {
+  font-weight: 600;
+  color: var(--darkpink);
+}
+
+.text_with_highlights span {
+  font-weight: 600;
+}
+
+.news-modal {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.news-modal.open .news-modal_body {
+  scale: 1;
+}
+
+.news-modal_body {
+  position: relative;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: scroll;
+  margin: auto;
+  padding: 30px;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  scale: 0.1;
+}
+
+.news-modal_body_clouse {
+  display: block;
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.news-modal_body_title {
+  text-align: center;
+}
+
+.news-list_list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.news-list_list_item {
+  padding: 15px;
+  background: var(--lightgray);
+  border-radius: var(--border-radius);
+}
+
+.news-list_list_item time {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--main_font-family);
+  font-size: var(--small-fz);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.news-list_list_item h3 {
+  margin: 0;
+}
+
+.news-list_list_item:hover {
+  background: var(--darkblue);
+}
+
+.news-list_list_item:hover time {
+  color: var(--white);
+}
+
+.news-list_pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.news-list_pagination img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.news-list_pagination_left {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.news-list_pagination_nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.news-list_pagination_nums a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--darkpink);
+}
+
+.news-list_pagination_nums a span {
+  margin: auto;
+  font-family: var(--main_font-family);
+  font-size: var(--normal-fz);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  color: var(--white);
+}
+
+@media (max-width: 1280px) {
+  .appointment_to_doctor {
+    padding: 14px 26px;
+  }
+}
+
+@media (max-width: 568px) {
+  .news-list_list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .news-list_pagination {
+    gap: 10px;
+  }
+
+  .news-list_pagination_nums {
+    gap: 5px;
+  }
+}

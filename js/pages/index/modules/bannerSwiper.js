@@ -1,0 +1,54 @@
+import { SwiperBase } from "../../../modules/swiperBase.min.js";
+class BannerSwiper extends SwiperBase {
+    constructor(swiper, options) {
+        super(swiper, options);
+        this.swiperBody = swiper.querySelector("div[class$='body']");
+        this.setHeightBody();
+        const self = this;
+        [...this.swiperPaginationItems].map((item) => item.addEventListener("click", self.clickNavigation.bind(self)));
+        window.addEventListener("resize", self.changeWidth.bind(self));
+        setInterval(self.checkHeight.bind(self), 1000);
+    }
+    setHeightBody() {
+        if (this.swiperBody == undefined) {
+            this.swiperBody = this.swiper.querySelector("div[class$='body']");
+        }
+        this.swiperBody.style.height = `${this.activeSlide.getBoundingClientRect().height}px`;
+    }
+    checkHeight() {
+        if (this.swiperBody.getBoundingClientRect().height != this.activeSlide.getBoundingClientRect().height) {
+            this.setHeightBody();
+            console.log("checkHeight");
+        }
+    }
+    nextSlide() {
+        if (this.nActiveSlide + 1 >= this.slides.length) {
+            this.render(0);
+        }
+        else {
+            this.render(this.nActiveSlide + 1);
+        }
+    }
+    render(nSlide) {
+        [...this.slides].map((item) => item.classList.remove("active"));
+        this.activeSlide = this.slides[nSlide];
+        this.activeSlide.classList.add("active");
+        [...this.swiperPaginationItems].map((item) => item.classList.remove("active"));
+        this.swiperPaginationItemActive = this.swiperPaginationItems[nSlide];
+        this.swiperPaginationItemActive.classList.add("active");
+        this.nActiveSlide = nSlide;
+    }
+    clickNavigation(e) {
+        function findEl(element, index, array) {
+            const el = e.target;
+            return element === el;
+        }
+        this.render([...this.swiperPaginationItems].findIndex(findEl));
+    }
+    changeWidth() {
+        this.setHeightBody();
+    }
+}
+export function newBannerSwiper(swiper, options) {
+    return new BannerSwiper(swiper, options);
+}

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Pacifico";
+  font-display: swap;
+  src: url("../fonts/Pacifico/Pacifico-Regular.ttf2") format("woff2"), url("../fonts/Pacifico/Pacifico-Regular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Miama_Nueva";
+  font-display: swap;
+  src: url("../fonts/Miama_Nueva/Miama_Nueva.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  unicode-range: U+00-FF;
+}
