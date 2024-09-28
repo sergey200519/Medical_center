@@ -1,0 +1,197 @@
+.phones a {
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  margin: 0;
+}
+
+.phones a span {
+  color: var(--red);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+}
+
+.logo_topheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logo_topheader img {
+  width: 200px;
+}
+
+.stomatology-laboratory_services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stomatology-laboratory_services li {
+  width: 100%;
+}
+
+.stomatology-laboratory_services li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.stomatology-laboratory_services li a img {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.stomatology-laboratory_services li a:hover {
+  color: var(--white);
+  background: var(--darkblue);
+}
+
+.appointment_to_doctor {
+  padding: 15px 30px;
+  color: var(--white);
+  font-family: var(--main_font-family);
+  font-size: var(--big-fz);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  background: var(--darkpink);
+  border-radius: var(--border-radius);
+}
+
+.appointment_to_doctor:hover {
+  border-radius: calc(var(--border-radius) + 10px);
+}
+
+.link {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+.text_with_highlights_pink span {
+  font-weight: 600;
+  color: var(--darkpink);
+}
+
+.text_with_highlights span {
+  font-weight: 600;
+}
+
+.specialist {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr;
+  grid-template-columns: 200px 1fr;
+  gap: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.specialist img {
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 14px 14px 10px 5px rgba(0, 180, 228, 0.15);
+          box-shadow: 14px 14px 10px 5px rgba(0, 180, 228, 0.15);
+}
+
+.specialist > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--main_gap);
+}
+
+.specialist-header h3 {
+  margin: 0 0 calc(var(--main_gap) / 2) 0;
+}
+
+.specialist-header p {
+  color: var(--darkblue);
+}
+
+.specialist_bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--main_gap);
+}
+
+.specialist_bottom h4 {
+  margin-bottom: calc(var(--main_gap) / 2);
+  color: var(--darkpink);
+}
+
+.specialist_bottom-info h3 {
+  margin-top: 0;
+}
+
+.specialist_bottom-info p {
+  margin-bottom: var(--main_gap);
+}
+
+@media (max-width: 1280px) {
+  .appointment_to_doctor {
+    padding: 14px 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .specialist {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .specialist img {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .specialist img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 568px) {
+  .specialist img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .specialist img {
+    width: 60%;
+  }
+}
