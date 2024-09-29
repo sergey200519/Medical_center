@@ -9,7 +9,7 @@ class AppointmentModal extends Modal {
         event.preventDefault();
 
         if (this.options.more.specialistName != null) {
-            (this.modal.querySelector("input[name=\'doctor_name\']") as HTMLInputElement).value = this.options.more.specialistName
+            (this.modal.querySelector(".doctor-input") as HTMLInputElement).value = this.options.more.specialistName
         }
 
         this.modal.classList.remove(this.options.classHide);
@@ -24,7 +24,7 @@ class AppointmentModal extends Modal {
         }, 300);
 
         
-        (this.modal.querySelector("input[name=\'doctor_name\']") as HTMLInputElement).value = ""
+        (this.modal.querySelector(".doctor-input") as HTMLInputElement).value = ""
         
     }
 }
