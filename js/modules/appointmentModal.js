@@ -6,7 +6,7 @@ class AppointmentModal extends Modal {
     open(event) {
         event.preventDefault();
         if (this.options.more.specialistName != null) {
-            this.modal.querySelector("input[name=\'doctor_name\']").value = this.options.more.specialistName;
+            this.modal.querySelector(".doctor-input").value = this.options.more.specialistName;
         }
         this.modal.classList.remove(this.options.classHide);
         setTimeout(() => {
@@ -18,7 +18,7 @@ class AppointmentModal extends Modal {
         setTimeout(() => {
             this.modal.classList.add(this.options.classHide);
         }, 300);
-        this.modal.querySelector("input[name=\'doctor_name\']").value = "";
+        this.modal.querySelector(".doctor-input").value = "";
     }
 }
 export function newAppointmentModal(modal, options) {
