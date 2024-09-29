@@ -227,25 +227,33 @@
     </menu>
 </aside>
 					<div class="content">
-						<div id="disqus_thread"></div>
-						<script>
-							/**
-							*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-							*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-							/*
-							var disqus_config = function () {
-							this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-							this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-							};
-							*/
-							(function() { // DON'T EDIT BELOW THIS LINE
-							var d = document, s = d.createElement('script');
-							s.src = 'https://http-xn-h1aakhocee-xn-p1ai.disqus.com/embed.js';
-							s.setAttribute('data-timestamp', +new Date());
-							(d.head || d.body).appendChild(s);
-							})();
-						</script>
-						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						<section class="comments-form">
+    <header class="h2">
+        <h2>Оставить коментарий</h2>
+    </header>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://http-xn-h1aakhocee-xn-p1ai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+</section>
+						
+						
 					</div>
 				</div>
 			</div>
@@ -307,7 +315,7 @@
 </footer>
 	</div>
 	<script defer type="module" src="../../../js/script.min.js"></script>
-	<!-- <script defer type="module" src="../../../js/pages/comments/comments.min.js"></script> -->
+	<script defer type="module" src="../../../js/pages/comments/comments.min.js"></script>
 	<script id="dsq-count-scr" src="//http-xn-h1aakhocee-xn-p1ai.disqus.com/count.js" async></script>
 </body>
 </html>

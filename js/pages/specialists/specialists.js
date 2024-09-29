@@ -16,7 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     [...document.querySelectorAll(".specialists_list_item")].forEach((specialistCard) => {
         specialistCard.addEventListener("click", (e) => {
             e.preventDefault();
-            window.location.href = `${window.location.href.replace("/specialists.html", "")}/components/pages/${specialistCard.getAttribute("data-page")}.html`;
+            const btn = specialistCard.querySelector(".appointment_btn-specialist");
+            // console.log(e.target, btn);
+            if (e.target != btn) {
+                window.location.href = `${window.location.href.replace("/specialists.html", "")}/components/pages/${specialistCard.getAttribute("data-page")}.html`;
+            }
         });
     });
     // setTimeout(() => {
