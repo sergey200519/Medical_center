@@ -118,7 +118,6 @@
   width: 100%;
   -webkit-box-shadow: 14px 14px 10px 5px rgba(0, 180, 228, 0.15);
           box-shadow: 14px 14px 10px 5px rgba(0, 180, 228, 0.15);
-  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -132,6 +131,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--main_gap);
+}
+
+.specialist_image {
+  display: block !important;
+}
+
+.specialist_image img {
+  aspect-ratio: 1/0.9;
 }
 
 .specialist-header h3 {
