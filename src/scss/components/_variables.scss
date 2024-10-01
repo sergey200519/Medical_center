@@ -53,6 +53,12 @@
     --tiffany: #0cb8b6;
 }
 
+@media (max-width: 1280px) {
+    :root {
+        --normal-fz: 17px;
+    }
+}
+
 @media (max-width: 568px) {
     :root {
         // section <--- main --->
@@ -60,7 +66,6 @@
         --container-padding: 15px;
         // font
         --small-fz: 14px;
-        --normal-fz: 16px;
         --big-fz: 18px;
     }
 }
