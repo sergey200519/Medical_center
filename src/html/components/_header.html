@@ -7,13 +7,22 @@
     </div>
     <div class="topheader_logo">
       <a href="/">
+        @@if (page === "index") {
+            <img src="img/logo.svg" alt="">
+        }
+        @@if (page === "specialists_pages") {
+            <img src="@@pagesPath/../../img/logo.svg" alt="">
+        }
+        @@if (page !== "index" && page !== "specialists_pages") {
+            <img src="@@pagesPath/img/logo.svg" alt="">
+        }
         <!-- @@if (page === "index") {
             <img src="img/logo.svg" alt="" srcset="">
           }
           @@if (page !== "index") {
             <img src="@@pagesPath/img/logo.svg" alt="" srcset="">
           } -->
-        <div class="topheader_logo_left">
+        <!-- <div class="topheader_logo_left">
           <span>стомсити.рф</span>
           <span class="title">стоматология</span>
         </div>
@@ -29,7 +38,7 @@
             <img src="@@pagesPath/../../img/sity_logo.png" alt="" srcset="">
           }
           <span>международная сеть лабораторий</span>
-        </div>
+        </div> -->
       </a>
 
     </div>
