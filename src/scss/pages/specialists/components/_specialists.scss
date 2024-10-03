@@ -6,6 +6,7 @@
         gap: 50px;
         @media (max-width: 1750px) {
             grid-template-columns: repeat(4, 1fr);
+            gap: 70px;
         }
         @media (max-width: 1450px) {
             grid-template-columns: repeat(3, 1fr);
@@ -15,10 +16,20 @@
         }
         @media (max-width: 550px) {
             grid-template-columns: 1fr;
+            gap: 50px;
         }
         &_item {
-            --height_img: 450px;
+            --height_img: 420px;
             cursor: pointer;
+            @media (max-width: 1150px) {
+                --height_img: 520px;
+            }
+            @media (max-width: 550px) {
+                --height_img: 620px;
+            }
+            @media (max-width: 400px) {
+                --height_img: 450px;
+            }
             img {
                 display: block;
                 width: 100%;
