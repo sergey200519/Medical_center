@@ -32,7 +32,7 @@
 }
 
 .logo_topheader img {
-  width: 200px;
+  width: 300px;
 }
 
 .stomatology-laboratory_services {
@@ -203,6 +203,10 @@
 }
 
 @media (max-width: 1280px) {
+  .logo_topheader img {
+    width: 235px;
+  }
+
   .appointment_to_doctor {
     padding: 12px 16px;
   }
