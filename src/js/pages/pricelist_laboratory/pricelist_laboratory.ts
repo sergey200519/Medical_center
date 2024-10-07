@@ -1,4 +1,6 @@
-const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/laboratory";
+import { pricelistLaboratoryList } from "./pricelist_laboratory_list.js";
+
+// const url = "https://sergey200519-medical-center-backend-flask-06b4.twc1.net/services/laboratory";
 
 const pricelistBox = document.querySelector(".det");
 
@@ -102,25 +104,25 @@ function render(services: Services) {
 }
 
 
+render(pricelistLaboratoryList);
 
 
-
-fetch(url, {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-})
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Ошибка запроса');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-        render(data);
-    })
-    .catch(error => {
-        console.log(error);
-    });
+// fetch(url, {
+//     method: 'GET',
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+// })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Ошибка запроса');
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log(data);
+//         render(data);
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     });
